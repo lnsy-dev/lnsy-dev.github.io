@@ -24,7 +24,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Personal website for Lindsey Mysse. This site is built with Jekyll and GitHub Pages.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lnsy-dev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: lindseydev
 github_username:  lnsy-dev
 
 # Build settings
