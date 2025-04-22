@@ -34,8 +34,8 @@ This site is built with Jekyll, a static site generator with built-in support fo
 - `_layouts/`: HTML templates
 - `_includes/`: Reusable components
 - `_config.yml`: Site configuration
-- `index.markdown`: Home page
-- `about.markdown`: About page
+- `index.md`: Home page
+- `about.md`: About page
 
 ## Adding Content
 
@@ -44,10 +44,10 @@ This site is built with Jekyll, a static site generator with built-in support fo
 To add a new blog post, create a file in the `_posts` directory with the following format:
 
 ```
-YEAR-MONTH-DAY-title.markdown
+YEAR-MONTH-DAY-title.md
 ```
 
-For example: `2025-04-22-my-new-post.markdown`
+For example: `2025-04-22-my-new-post.md`
 
 Include front matter at the top of the file:
 
@@ -64,7 +64,7 @@ Your content here, written in Markdown...
 
 ### Pages
 
-To add a new page, create a file in the root directory with a `.markdown` or `.html` extension, and include front matter:
+To add a new page, create a file in the root directory with a `.md` or `.html` extension, and include front matter:
 
 ```yaml
 ---
