@@ -20,7 +20,7 @@
 
 title: LNSY
 email: lindsey.mysse@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: I am a Multi-Webby winning web designer and developer who has also worked in environmental design, interface and fine art. I have developed software solutions for everything from gestural interface for musical instruments to tech platforms for open source intelligence. Over the past 7 years I've developed interfaces for machine learning applications, incorporating both new and mature technology back-ends.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lnsy-dev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lnsy-dev

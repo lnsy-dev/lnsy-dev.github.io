@@ -66,10 +66,23 @@ html, body {
   text-shadow: var(--text-shadow) !important;
 }
 
+header p {
+  width: 40em;
+  text-align: justify;
+}
+
 /* Post list styling */
 main ul li {
   margin-bottom: 0.5rem;
 }
+
+#logo {
+  transform: rotateY(180deg);
+  left: 0px;
+  top:0px;
+  display: block;
+}
+
 
 main ul li span {
   color: var(--text-muted);
