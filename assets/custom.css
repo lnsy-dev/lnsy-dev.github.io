@@ -1,6 +1,5 @@
 /* Custom Theme Implementation */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans+Condensed:wght@400;600&display=swap');
 
 
 
@@ -37,6 +36,7 @@
   --font-text-theme: "Fira Code";
   --font-interface-theme: "Fira Code";
   --font-monospace-theme: "Fira Code";
+  --font-logo-theme: "Fira Sans Condensed";
   --line-height-normal: 1.75;
   --p-spacing: 2.25rem;
   --list-marker-color: #377c43;
@@ -94,7 +94,7 @@ main ul li {
   left: 0px;
   top:0px;
   display: block;
-  font-weight: bolder;
+  padding-left: 1em;
 }
 
 
