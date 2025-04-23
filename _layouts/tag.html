@@ -11,20 +11,30 @@ layout: default
 <main>
   <ul>
     {% for post in site.posts %}
-      {% assign text_content = post.content | strip_html %}
-      {% assign hash_words = text_content | split: " " | where_exp: "word", "word contains '#'" %}
-      
       {% assign has_tag = false %}
-      {% for word in hash_words %}
-        {% if word contains "#" %}
-          {% assign tag_word = word | strip | strip_newlines %}
-          {% assign clean_tag = tag_word | remove_first: "#" | downcase | strip %}
-          {% if clean_tag == page.title %}
+      
+      {% if post.tags %}
+        {% for tag in post.tags %}
+          {% if tag == page.title %}
             {% assign has_tag = true %}
             {% break %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
+      {% else %}
+        {% assign text_content = post.content | strip_html %}
+        {% assign hash_words = text_content | split: " " | where_exp: "word", "word contains '#'" %}
+        
+        {% for word in hash_words %}
+          {% if word contains "#" %}
+            {% assign tag_word = word | strip | strip_newlines %}
+            {% assign clean_tag = tag_word | remove_first: "#" | downcase | strip %}
+            {% if clean_tag == page.title %}
+              {% assign has_tag = true %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
       
       {% if has_tag %}
       <li>

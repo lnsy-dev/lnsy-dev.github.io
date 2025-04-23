@@ -1,14 +1,8 @@
 /* Custom Theme Implementation */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-/* Import Departure Mono font */
-@font-face {
-  font-family: "Departure Mono";
-  src: url("DepartureMono-Regular.woff2") format("woff2"),
-       url("DepartureMono-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
+
 
 :root {
   --accent-h: 120;
@@ -39,9 +33,9 @@
   --code-background: #f5f2e8;
   --hr-color: #cccccc;
   --text-muted: #377c43;
-  --font-text-theme: "Departure Mono";
-  --font-interface-theme: "Departure Mono";
-  --font-monospace-theme: "Departure Mono";
+  --font-text-theme: "Fira Code";
+  --font-interface-theme: "Fira Code";
+  --font-monospace-theme: "Fira Code";
   --line-height-normal: 1.75;
   --p-spacing: 2.25rem;
   --list-marker-color: #377c43;
