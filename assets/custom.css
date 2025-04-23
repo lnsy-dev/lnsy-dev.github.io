@@ -74,6 +74,10 @@ pre code {
   color: var(--text-normal);
 }
 
+.post-title {
+  text-align: right;
+}
+
 
 
 article {

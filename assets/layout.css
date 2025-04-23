@@ -12,6 +12,11 @@ main, footer, header {
 
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 qr-code {
   height: 20em;
   width: auto;

@@ -71,7 +71,27 @@ This site is built with Jekyll, a static site generator with built-in support fo
 
 ## Adding Content
 
+
+
 ### Blog Posts
+
+### Using the Post Creation Script
+
+You can use the included `create-new-post.sh` script to quickly create a new post with the correct format:
+
+```
+./create-new-post.sh my-new-post-name
+```
+
+This script will:
+- Create a new Markdown file in the `_posts` directory with the current date
+- Set up frontmatter with the post title (derived from the filename)
+- Include placeholder content and formatting examples
+- Automatically format the title with proper capitalization
+
+The script will generate a post at `_posts/YYYY-MM-DD-my-new-post-name.md` that you can immediately start editing.
+
+### Manually add a blog post
 
 To add a new blog post, create a file in the `_posts` directory with the following format:
 
@@ -95,6 +115,7 @@ Your content here, written in Markdown...
 
 #tag1 #tag2 #tag3
 ```
+
 
 ### Using Hashtags
 
