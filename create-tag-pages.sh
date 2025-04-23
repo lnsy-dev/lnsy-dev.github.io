@@ -5,7 +5,8 @@ mkdir -p _tags
 
 # Extract all hashtags from posts
 echo "Extracting hashtags from posts..."
-TAGS=$(grep -oh "#\w\+" _posts/*.md | sed 's/#//' | sort | uniq)
+# Using Extended regex with grep -E
+TAGS=$(grep -Eoh "#[a-zA-Z0-9-]+" _posts/*.md | sed 's/#//' | sort | uniq)
 
 # Create tag pages
 for tag in $TAGS; do

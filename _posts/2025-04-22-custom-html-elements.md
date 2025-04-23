@@ -4,7 +4,12 @@ title: Custom Html Elements
 date: 2025-04-22 18:23:36 -0700
 categories: blog
 created: 2025-04-22T18:23
-updated: 2025-04-22T19:04
+updated: 2025-04-22T19:22
+tags:
+  - html
+  - code
+  - webdev
+  - custom-html-elements
 ---
 
 

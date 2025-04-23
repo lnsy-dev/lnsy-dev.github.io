@@ -4,7 +4,12 @@ title: Qr Code Element
 date: 2025-04-22 17:11:27 -0700
 categories: blog
 created: 2025-04-22T17:11
-updated: 2025-04-22T18:34
+updated: 2025-04-22T19:24
+tags:
+  - html
+  - code
+  - webdev
+  - custom-html-elements
 ---
 
 <script src="https://lnsy-dev.github.io/qr-code-element/src/qr-code.js"></script>
@@ -20,5 +25,3 @@ updated: 2025-04-22T18:34
 It acts like a standard div, and you can style it with standard CSS background and foreground colors. 
 
 I use this code to generate labels I can print out. [My label making software can be found here](https://lnsy-dev.github.io/qr-code-element/qr-code-label-generator.html)
-
- #software #qr-codes #ux 

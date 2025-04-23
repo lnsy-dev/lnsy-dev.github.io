@@ -9,6 +9,41 @@
   <body>
     {{ content }}
     
+    <div class="post-tags">
+      {% if page.tags %}
+        <h3>Tags</h3>
+        <p>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-link">#{{ tag }}</a>
+          {% endfor %}
+        </p>
+      {% else %}
+        {% assign text_content = page.content | strip_html %}
+        {% assign hash_words = text_content | split: " " | where_exp: "word", "word contains '#'" %}
+        
+        {% if hash_words.size > 0 %}
+          <h3>Tags</h3>
+          <p>
+            {% assign unique_tags = "" | split: "" %}
+            {% for word in hash_words %}
+              {% if word contains "#" %}
+                {% assign tag_word = word | strip | strip_newlines %}
+                {% assign clean_tag = tag_word | remove_first: "#" | downcase | strip %}
+                {% if clean_tag != "" %}
+                  {% unless clean_tag contains "#" %}
+                    {% unless unique_tags contains clean_tag %}
+                      {% assign unique_tags = unique_tags | push: clean_tag %}
+                      <a href="{{ '/tags/' | append: clean_tag | relative_url }}" class="tag-link">#{{ clean_tag }}</a>
+                    {% endunless %}
+                  {% endunless %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </p>
+        {% endif %}
+      {% endif %}
+    </div>
+    
     <div class="post-navigation">
       <p>
         <a href="{{ '/' | relative_url }}">&larr; Back to Home</a>
