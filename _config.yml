@@ -27,9 +27,10 @@ url: "https://lnsy-dev.github.io" # the base hostname & protocol for your site, 
 github_username:  lnsy-dev
 
 # Build settings
-theme: no-style-please
+remote_theme: riggraz/no-style-please
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Add custom includes
 include:
