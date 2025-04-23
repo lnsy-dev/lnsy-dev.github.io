@@ -16,7 +16,8 @@
   --background-secondary: #fcf9f0;
   --background-primary-alt: #f5f2e8;
   --background-secondary-alt: #f5f2e8;
-  --background-modifier-hover: #f5f2e8;
+  --background-modifier-hover: #c4e1c6;
+  --background-modifier-active: #aabbaa;
   --background-modifier-border: #e5e2d8;
   --dropdown-background: #f5f2e8;
   --interactive-normal: #f5f2e8;
@@ -66,9 +67,21 @@ html, body {
   text-shadow: var(--text-shadow) !important;
 }
 
-header p {
+qr-code {
+  height: 20em;
+  width: auto;
+  margin: auto;
+}
+
+qr-code img {
+  width 100%;
+  height: auto;
+}
+
+.site-description {
   width: 40em;
   text-align: justify;
+  margin-left: auto;
 }
 
 /* Post list styling */
@@ -81,6 +94,7 @@ main ul li {
   left: 0px;
   top:0px;
   display: block;
+  font-weight: bolder;
 }
 
 
@@ -247,6 +261,10 @@ header, footer {
 .post-meta {
   color: var(--text-muted) !important;
   font-family: var(--font-text-theme), monospace !important;
+}
+
+p.post-meta{
+  width: 100%;
 }
 
 .post-list li {
@@ -428,7 +446,7 @@ strong, b {
     margin-bottom: 1em;
   }
 
-  article button {
+ button {
     background-color: var(--background-primary-alt);
     border: 1px solid var(--background-modifier-border);
     padding: 0.5em 1em;
@@ -437,8 +455,13 @@ strong, b {
     font-family: var(--font-interface-theme), monospace;
   }
 
-  article button:hover {
+
+  button:hover {
     background-color: var(--background-modifier-hover);
+  }
+
+  button:active {
+    background-color: var(--background-modifier-active);
   }
 
   #border {
@@ -578,4 +601,9 @@ code {
 :not(pre) > code {
   display: inline;
   white-space: nowrap;
+}
+
+a {
+  font-style: italic;
+  color: var(--bold-color) !important;
 }
