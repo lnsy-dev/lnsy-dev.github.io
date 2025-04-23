@@ -4,10 +4,12 @@ html, body {
   min-height: 100vh;
 }
 
-main {
+main, footer, header {
   max-width: 60em;
+
   width: calc(100% - 2em);
   margin: auto;
+
 }
 
 qr-code {
@@ -26,7 +28,6 @@ qr-code img {
   left: 0px;
   top: 0px;
   display: block;
-  padding-left: 1em;
 }
 
 

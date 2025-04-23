@@ -38,7 +38,10 @@ a {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: var(--h1-color);
+  font-size: var(--font-size);
   font-family: var(--font-interface-theme), monospace;
+  font-style: italic;
+  font-weight: 400;
 }
 
 /* Code and pre formatting */
@@ -71,47 +74,10 @@ pre code {
   color: var(--text-normal);
 }
 
-/* Text styling */
-.wrapper, .page-content, .post-content, .home, .post, .page {
-  font-family: var(--font-text-theme), monospace;
-  color: var(--text-normal);
-  text-shadow: var(--text-shadow);
-}
 
-h1, h2, h3, h4, h5, h6, 
-.post-title, .post-list-heading, .page-heading, .footer-heading {
-  font-family: var(--font-interface-theme), monospace;
-  color: var(--h1-color);
-  margin-bottom: var(--p-spacing);
-  font-weight: var(--h1-weight);
-  text-shadow: var(--text-shadow);
-}
-
-h1, .post-title {
-  font-size: var(--h1-size);
-  line-height: var(--h1-line-height);
-}
-
-h2, .post-list-heading, .page-heading {
-  font-size: var(--h2-size);
-  line-height: var(--h2-line-height);
-  font-weight: var(--h2-weight);
-}
-
-h3, .post-link {
-  font-size: var(--h3-size);
-  line-height: var(--h3-line-height);
-  font-weight: var(--h3-weight);
-}
-
-p, .post-content p {
-  margin-bottom: var(--p-spacing);
-  font-family: var(--font-text-theme), monospace;
-}
 
 article {
   text-align: justify;
-  border-bottom: 1px dashed #000;
 }
 
 article code {
