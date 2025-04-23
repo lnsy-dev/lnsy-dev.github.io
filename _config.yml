@@ -43,14 +43,6 @@ head_custom: |
 # Markdown settings
 markdown_ext: "md"
 
-# Kramdown settings to enable HTML embedding with script tags
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-  html_to_native: true
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
