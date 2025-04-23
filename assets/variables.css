@@ -51,4 +51,5 @@
   --link-decoration: none;
   --link-external-decoration: none;
   --text-shadow: 0 0 1px rgba(10, 92, 10, 0.3);
+  --border-radius: 4px;
 } 

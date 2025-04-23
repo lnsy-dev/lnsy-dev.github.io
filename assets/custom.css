@@ -5,10 +5,14 @@
 
 /* General styling */
 html, body {
-  font-family: var(--font-text-theme), monospace !important;
-  background-color: var(--background-primary) !important;
-  color: var(--text-normal) !important;
-  line-height: var(--line-height-normal) !important;
+  font-family: var(--font-text-theme), monospace;
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  line-height: var(--line-height-normal);
+}
+
+body {
+  text-shadow: var(--text-shadow);
 }
 
 .site-description {
@@ -28,7 +32,7 @@ a:hover {
 
 a {
   font-style: italic;
-  color: var(--bold-color) !important;
+  color: var(--bold-color);
 }
 
 /* Headings */
@@ -69,40 +73,40 @@ pre code {
 
 /* Text styling */
 .wrapper, .page-content, .post-content, .home, .post, .page {
-  font-family: var(--font-text-theme), monospace !important;
-  color: var(--text-normal) !important;
-  text-shadow: var(--text-shadow) !important;
+  font-family: var(--font-text-theme), monospace;
+  color: var(--text-normal);
+  text-shadow: var(--text-shadow);
 }
 
 h1, h2, h3, h4, h5, h6, 
 .post-title, .post-list-heading, .page-heading, .footer-heading {
-  font-family: var(--font-interface-theme), monospace !important;
-  color: var(--h1-color) !important;
-  margin-bottom: var(--p-spacing) !important;
-  font-weight: var(--h1-weight) !important;
-  text-shadow: var(--text-shadow) !important;
+  font-family: var(--font-interface-theme), monospace;
+  color: var(--h1-color);
+  margin-bottom: var(--p-spacing);
+  font-weight: var(--h1-weight);
+  text-shadow: var(--text-shadow);
 }
 
 h1, .post-title {
-  font-size: var(--h1-size) !important;
-  line-height: var(--h1-line-height) !important;
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
 }
 
 h2, .post-list-heading, .page-heading {
-  font-size: var(--h2-size) !important;
-  line-height: var(--h2-line-height) !important;
-  font-weight: var(--h2-weight) !important;
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  font-weight: var(--h2-weight);
 }
 
 h3, .post-link {
-  font-size: var(--h3-size) !important;
-  line-height: var(--h3-line-height) !important;
-  font-weight: var(--h3-weight) !important;
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  font-weight: var(--h3-weight);
 }
 
 p, .post-content p {
-  margin-bottom: var(--p-spacing) !important;
-  font-family: var(--font-text-theme), monospace !important;
+  margin-bottom: var(--p-spacing);
+  font-family: var(--font-text-theme), monospace;
 }
 
 article {
@@ -122,36 +126,36 @@ article .block {
 
 /* Site header and footer styling */
 .site-header {
-  background-color: var(--background-secondary) !important;
+  background-color: var(--background-secondary);
 }
 
 .site-title, .site-title:visited {
-  color: var(--h1-color) !important;
-  font-family: var(--font-interface-theme), monospace !important;
+  color: var(--h1-color);
+  font-family: var(--font-interface-theme), monospace;
 }
 
 .site-nav {
-  background-color: var(--background-primary) !important;
-  border: none !important;
+  background-color: var(--background-primary);
+  border: none;
 }
 
 .site-nav .page-link {
-  color: var(--text-normal) !important;
+  color: var(--text-normal);
 }
 
 .site-footer {
-  background-color: var(--background-secondary) !important;
-  color: var(--text-muted) !important;
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
 }
 
 .footer-col-wrapper, .footer-col, .contact-list, .social-media-list {
-  color: var(--text-muted) !important;
+  color: var(--text-muted);
 }
 
 /* Post styling */
 .post-meta {
-  color: var(--text-muted) !important;
-  font-family: var(--font-text-theme), monospace !important;
+  color: var(--text-muted);
+  font-family: var(--font-text-theme), monospace;
 }
 
 main ul li span {
@@ -161,45 +165,45 @@ main ul li span {
 
 /* List styling */
 li::marker {
-  color: var(--list-marker-color) !important;
+  color: var(--list-marker-color);
 }
 
 /* Horizontal rule */
 hr {
-  border-color: var(--hr-color) !important;
+  border-color: var(--hr-color);
 }
 
 /* SVG icons */
 .svg-icon {
-  fill: var(--text-muted) !important;
+  fill: var(--text-muted);
 }
 
 /* Menu icon in mobile view */
 .site-nav .menu-icon > svg {
-  fill: var(--text-normal) !important;
+  fill: var(--text-normal);
 }
 
 /* Table styling */
 table, th, td {
-  color: var(--text-normal) !important;
+  color: var(--text-normal);
 }
 
 table th {
-  background-color: var(--code-background) !important;
+  background-color: var(--code-background);
 }
 
 table tr:nth-child(even) {
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--background-secondary-alt);
 }
 
 /* Page content */
 .page-content {
-  background-color: var(--background-primary) !important;
+  background-color: var(--background-primary);
 }
 
 /* Bold text */
 strong, b {
-  color: var(--bold-color) !important;
+  color: var(--bold-color);
 }
 
 /* Tag styling */
@@ -231,13 +235,13 @@ button:active {
 }
 
 /* Highlight.js Theme using site variables */
-.hljs { background: transparent !important; padding: 0 !important; }
+.hljs { background: transparent; padding: 0; }
 
 .hljs-comment,
 .hljs-quote,
 .hljs-doctag,
 .hljs-meta {
-  color: var(--code-comment) !important;
+  color: var(--code-comment);
 }
 
 .hljs-keyword,
@@ -245,8 +249,8 @@ button:active {
 .hljs-meta-keyword,
 .hljs-tag,
 .hljs-name {
-  color: var(--h1-color) !important;
-  font-weight: var(--h3-weight) !important;
+  color: var(--h1-color);
+  font-weight: var(--h3-weight);
 }
 
 .hljs-attribute,
@@ -254,13 +258,13 @@ button:active {
 .hljs-variable,
 .hljs-template-variable,
 .hljs-property {
-  color: var(--text-muted) !important;
+  color: var(--text-muted);
 }
 
 .hljs-string,
 .hljs-regexp,
 .hljs-meta-string {
-  color: var(--h3-color) !important;
+  color: var(--h3-color);
 }
 
 .hljs-symbol,
@@ -268,12 +272,12 @@ button:active {
 .hljs-link,
 .hljs-built_in,
 .hljs-number {
-  color: var(--h2-color) !important;
+  color: var(--h2-color);
 }
 
 /* Force literal to be blue */
 .hljs-literal {
-  color: var(--h3-color) !important;
+  color: var(--h3-color);
 }
 
 /* Force title to be maroon and bold */
@@ -282,46 +286,46 @@ button:active {
 .hljs-title.class,
 .hljs-title.class.inherited,
 .hljs-title.function {
-  color: var(--h1-color) !important;
-  font-weight: var(--h2-weight) !important;
+  color: var(--h1-color);
+  font-weight: var(--h2-weight);
 }
 
 .hljs-section,
 .hljs-selector-id,
 .hljs-type {
-  color: var(--h2-color) !important;
-  font-weight: var(--h2-weight) !important;
+  color: var(--h2-color);
+  font-weight: var(--h2-weight);
 }
 
 .hljs-selector-class {
-  color: var(--h3-color) !important;
+  color: var(--h3-color);
 }
 
 .hljs-strong {
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 .hljs-emphasis {
-  font-style: italic !important;
+  font-style: italic;
 }
 
 .hljs-formula {
-  background-color: var(--background-primary-alt) !important;
-  padding: 0.1em 0.2em !important;
-  border-radius: 3px !important;
+  background-color: var(--background-primary-alt);
+  padding: 0.1em 0.2em;
+  border-radius: var(--border-radius);
 }
 
 .hljs-deletion {
-  color: var(--text-muted) !important;
-  background-color: var(--background-modifier-hover) !important;
+  color: var(--text-muted);
+  background-color: var(--background-modifier-hover);
 }
 
 .hljs-addition {
-  color: var(--h2-color) !important;
-  background-color: var(--background-primary-alt) !important;
+  color: var(--h2-color);
+  background-color: var(--background-primary-alt);
 }
 
 .hljs-operator,
 .hljs-punctuation {
-  color: var(--text-normal) !important;
+  color: var(--text-normal);
 }
