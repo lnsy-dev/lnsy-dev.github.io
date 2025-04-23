@@ -1,10 +1,10 @@
 ---
 layout: html
-title: Custom Html Elements
+title: Custom HTML Elements
 date: 2025-04-22 18:23:36 -0700
 categories: blog
 created: 2025-04-22T18:23
-updated: 2025-04-22T19:22
+updated: 2025-04-22T19:51
 tags:
   - html
   - code
