@@ -1,0 +1,54 @@
+/* Variables CSS */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans+Condensed:wght@400;600&display=swap');
+
+:root {
+  --accent-h: 120;
+  --accent-s: 60%;
+  --accent-l: 25%;
+  --text-on-accent: white;
+  --slider-track-background: #1c3320;
+  --slider-thumb-border-color: #0a5c0a;
+  --toggle-thumb-color: #0a5c0a;
+  --background-primary: #fcf9f0;
+  --background-secondary: #fcf9f0;
+  --background-primary-alt: #f5f2e8;
+  --background-secondary-alt: #f5f2e8;
+  --background-modifier-hover: #c4e1c6;
+  --background-modifier-active: #aabbaa;
+  --background-modifier-border: #e5e2d8;
+  --dropdown-background: #f5f2e8;
+  --interactive-normal: #f5f2e8;
+  --text-normal: #0a5c0a;
+  --h1-color: #064d06;
+  --h2-color: #064d06;
+  --h3-color: #064d06;
+  --h4-color: #064d06;
+  --h5-color: #064d06;
+  --h6-color: #064d06;
+  --bold-color: #054b05;
+  --code-normal: #0a5c0a;
+  --code-comment: #639e71;
+  --code-background: #f5f2e8;
+  --hr-color: #cccccc;
+  --text-muted: #377c43;
+  --font-text-theme: "Fira Code";
+  --font-interface-theme: "Fira Code";
+  --font-monospace-theme: "Fira Code";
+  --font-logo-theme: "Fira Sans Condensed";
+  --line-height-normal: 1.75;
+  --p-spacing: 2.25rem;
+  --list-marker-color: #377c43;
+  --h1-size: 1.875rem;
+  --h1-line-height: 2.25rem;
+  --h2-size: 1.5em;
+  --h2-line-height: 1.3333333;
+  --h3-size: 1.25em;
+  --h3-line-height: 1.6;
+  --h1-weight: 500;
+  --h2-weight: 500;
+  --h3-weight: 500;
+  --text-selection: #cccccc;
+  --link-decoration: none;
+  --link-external-decoration: none;
+  --text-shadow: 0 0 1px rgba(10, 92, 10, 0.3);
+} 

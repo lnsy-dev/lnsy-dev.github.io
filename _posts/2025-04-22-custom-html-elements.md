@@ -4,7 +4,7 @@ title: Custom HTML Elements
 date: 2025-04-22 18:23:36 -0700
 categories: blog
 created: 2025-04-22T18:23
-updated: 2025-04-22T19:51
+updated: 2025-04-23T08:59
 tags:
   - html
   - code
@@ -18,8 +18,6 @@ tags:
       <article class="two-up">
         <h2 style="font-size: 24pt;">Custom HTML Elements</h2>
         <p><small>Last Updated 30 Nov, 2023</small></p>
-        <lazy-img src="./assets/00182-1353117845.png"></lazy-img>
-        <br>
         <h3>Introduction</h3>
         <p>My favorite feature of ES6+ is Custom HTML Elements. Custom Elements allow us to extend HTML for React-Like components without the need for preprocessors or compilers. There are fewer things "out of the box" for these components, but that means they can be lighter and more readable than react.</p>
         <p>You can use these components as you would any other html elements. Each component needs a dash in its name. So </p>

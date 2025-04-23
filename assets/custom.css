@@ -1,116 +1,21 @@
 /* Custom Theme Implementation */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans+Condensed:wght@400;600&display=swap');
+@import 'variables.css';
+@import 'layout.css';
 
-
-
-:root {
-  --accent-h: 120;
-  --accent-s: 60%;
-  --accent-l: 25%;
-  --text-on-accent: white;
-  --slider-track-background: #1c3320;
-  --slider-thumb-border-color: #0a5c0a;
-  --toggle-thumb-color: #0a5c0a;
-  --background-primary: #fcf9f0;
-  --background-secondary: #fcf9f0;
-  --background-primary-alt: #f5f2e8;
-  --background-secondary-alt: #f5f2e8;
-  --background-modifier-hover: #c4e1c6;
-  --background-modifier-active: #aabbaa;
-  --background-modifier-border: #e5e2d8;
-  --dropdown-background: #f5f2e8;
-  --interactive-normal: #f5f2e8;
-  --text-normal: #0a5c0a;
-  --h1-color: #064d06;
-  --h2-color: #064d06;
-  --h3-color: #064d06;
-  --h4-color: #064d06;
-  --h5-color: #064d06;
-  --h6-color: #064d06;
-  --bold-color: #054b05;
-  --code-normal: #0a5c0a;
-  --code-comment: #639e71;
-  --code-background: #f5f2e8;
-  --hr-color: #cccccc;
-  --text-muted: #377c43;
-  --font-text-theme: "Fira Code";
-  --font-interface-theme: "Fira Code";
-  --font-monospace-theme: "Fira Code";
-  --font-logo-theme: "Fira Sans Condensed";
-  --line-height-normal: 1.75;
-  --p-spacing: 2.25rem;
-  --list-marker-color: #377c43;
-  --h1-size: 1.875rem;
-  --h1-line-height: 2.25rem;
-  --h2-size: 1.5em;
-  --h2-line-height: 1.3333333;
-  --h3-size: 1.25em;
-  --h3-line-height: 1.6;
-  --h1-weight: 500;
-  --h2-weight: 500;
-  --h3-weight: 500;
-  --text-selection: #cccccc;
-  --link-decoration: none;
-  --link-external-decoration: none;
-  --text-shadow: 0 0 1px rgba(10, 92, 10, 0.3);
-}
-
-/* Apply theme variables to the site with more specific selectors */
+/* General styling */
 html, body {
   font-family: var(--font-text-theme), monospace !important;
   background-color: var(--background-primary) !important;
   color: var(--text-normal) !important;
   line-height: var(--line-height-normal) !important;
-  min-height: 100vh;
-  max-width: 60em;
-  margin: auto;
-  text-shadow: var(--text-shadow) !important;
-}
-
-qr-code {
-  height: 20em;
-  width: auto;
-  margin: auto;
-}
-
-qr-code img {
-  width 100%;
-  height: auto;
 }
 
 .site-description {
-  width: 40em;
   text-align: justify;
-  margin-left: auto;
 }
 
-/* Post list styling */
-main ul li {
-  margin-bottom: 0.5rem;
-}
-
-#logo {
-  transform: rotateY(180deg);
-  left: 0px;
-  top:0px;
-  display: block;
-  padding-left: 1em;
-}
-
-
-main ul li span {
-  color: var(--text-muted);
-  margin-right: 0.5rem;
-}
-
-/* General styling */
-body {
-  background-color: var(--background-primary);
-  color: var(--text-normal);
-  font-family: var(--font-text-theme), monospace;
-  text-shadow: var(--text-shadow);
-}
-
+/* Links */
 a, a:visited {
   color: var(--h1-color);
   text-decoration: var(--link-decoration);
@@ -121,23 +26,39 @@ a:hover {
   text-decoration: underline;
 }
 
+a {
+  font-style: italic;
+  color: var(--bold-color) !important;
+}
+
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: var(--h1-color);
   font-family: var(--font-interface-theme), monospace;
 }
 
+/* Code and pre formatting */
 code, pre {
   font-family: var(--font-monospace-theme), monospace;
   background-color: var(--code-background);
   color: var(--code-normal);
   font-size: 95%;
-  border-radius: 3px;
+}
+
+pre {
+  border: 1px solid var(--background-modifier-border);
+}
+
+pre code {
+  font-family: var(--font-monospace-theme), monospace;
+  font-size: 80%;
+  background: transparent;
+  border: none;
+  color: var(--code-normal);
 }
 
 :not(pre) > code {
-  padding: 0.2em 0.4em;
   border: 1px solid var(--background-modifier-border);
-  white-space: nowrap;
 }
 
 /* Selection color */
@@ -146,7 +67,7 @@ code, pre {
   color: var(--text-normal);
 }
 
-/* Ensure all text content uses our font and colors */
+/* Text styling */
 .wrapper, .page-content, .post-content, .home, .post, .page {
   font-family: var(--font-text-theme), monospace !important;
   color: var(--text-normal) !important;
@@ -184,35 +105,24 @@ p, .post-content p {
   font-family: var(--font-text-theme), monospace !important;
 }
 
-/* Links */
-a, a:visited, .site-nav .page-link {
-  color: var(--h1-color) !important;
-  text-decoration: var(--link-decoration) !important;
+article {
+  text-align: justify;
+  border-bottom: 1px dashed #000;
 }
 
-a:hover {
-  text-decoration: underline !important;
+article code {
+  font-family: var(--font-monospace-theme), monospace;
+  width: 100%;
+  font-size: 80%;
 }
 
-/* Code formatting */
-code, pre, .highlighter-rouge, .highlight {
-  font-family: var(--font-monospace-theme), monospace !important;
-  background-color: var(--code-background) !important;
-  color: var(--code-normal) !important;
-  border: none !important;
-  text-shadow: var(--text-shadow) !important;
+article .block {
+  background-color: var(--background-primary-alt);
 }
 
-header, footer {
-  border: none !important;
-}
-
-/* Header and footer */
+/* Site header and footer styling */
 .site-header {
   background-color: var(--background-secondary) !important;
-  border: none !important;
-  border-top: none !important;
-  border-bottom: none !important;
 }
 
 .site-title, .site-title:visited {
@@ -229,53 +139,27 @@ header, footer {
   color: var(--text-normal) !important;
 }
 
-/* Footer styling */
 .site-footer {
   background-color: var(--background-secondary) !important;
   color: var(--text-muted) !important;
-  border: none !important;
-  border-top: none !important;
 }
 
 .footer-col-wrapper, .footer-col, .contact-list, .social-media-list {
   color: var(--text-muted) !important;
 }
 
-/* Hide the third footer column and footer heading */
-.footer-col-3, .footer-heading {
-  display: none !important;
-}
-
-/* Adjust the width of the remaining columns */
-.footer-col-1 {
-  width: -webkit-calc(50% - (30px / 2)) !important;
-  width: calc(50% - (30px / 2)) !important;
-}
-
-.footer-col-2 {
-  width: -webkit-calc(50% - (30px / 2)) !important;
-  width: calc(50% - (30px / 2)) !important;
-}
-
-/* Post and page content */
+/* Post styling */
 .post-meta {
   color: var(--text-muted) !important;
   font-family: var(--font-text-theme), monospace !important;
 }
 
-p.post-meta{
-  width: 100%;
+main ul li span {
+  color: var(--text-muted);
+  margin-right: 0.5rem;
 }
 
-.post-list li {
-  margin-bottom: var(--p-spacing) !important;
-}
-
-/* Lists */
-ul, ol {
-  margin-bottom: var(--p-spacing) !important;
-}
-
+/* List styling */
 li::marker {
   color: var(--list-marker-color) !important;
 }
@@ -295,7 +179,7 @@ hr {
   fill: var(--text-normal) !important;
 }
 
-/* Tables */
+/* Table styling */
 table, th, td {
   color: var(--text-normal) !important;
 }
@@ -308,48 +192,22 @@ table tr:nth-child(even) {
   background-color: var(--background-secondary-alt) !important;
 }
 
-/* Make sure main content area has the correct background */
+/* Page content */
 .page-content {
   background-color: var(--background-primary) !important;
 }
 
-/* Special class for bold text */
+/* Bold text */
 strong, b {
   color: var(--bold-color) !important;
 }
 
-/* Syntax highlighting */
-.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: var(--code-comment) !important;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 600px) {
-  .site-nav {
-    background-color: var(--background-secondary) !important;
-  }
-  
-  .site-nav input:checked ~ .trigger {
-    background-color: var(--background-secondary) !important;
-  }
-}
-
-/* Tags styling */
-.post-tags {
-  margin: 2rem 0;
-}
-
+/* Tag styling */
 .tag-link {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  margin: 0 0.3rem 0.3rem 0;
   border: 1px solid var(--background-modifier-border);
   background-color: var(--background-primary-alt);
-  border-radius: 3px;
-  font-size: 0.9rem;
   color: var(--text-normal);
   text-decoration: none;
-  transition: background-color 0.2s ease;
 }
 
 .tag-link:hover {
@@ -357,151 +215,22 @@ strong, b {
   text-decoration: none;
 }
 
-.tags-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tags-list li {
-  margin: 0;
-} 
-
-
-
-  /*
-  
-      Grid Layout
-
-   */
-
-   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: auto;
-    grid-gap: 1.5rem;
-    width: 100%;
-    max-width: 60em;
-    margin: 0 auto;
-   }
-
-
-  .two-up {
-    grid-column: span 2;
-  }
-
-  @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-    .grid-container > * {
-      grid-column: span 1;
-    }
-  }
-
-  article {
-    padding: 1.5em;
-    margin-top: 0.5em;
-    border-bottom: 1px dashed #000;
-  }
-
-  article p {
-    padding-bottom: 1em;
-    margin-bottom: 0;
-  }
-
-  article h1, article h2, article h3 {
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  article pre {
-    margin-bottom: 1em;
-    overflow-x: auto;
-    background-color: var(--code-background);
-    padding: 1em;
-    border-radius: 4px;
-    width: 100%;
-  }
-
-  article code {
-    font-family: var(--font-monospace-theme), monospace;
-    width: 100%;
-    font-size: 80%;
-  }
-
-  article .block {
-    background-color: var(--background-primary-alt);
-    padding: 1em;
-    border-radius: 4px;
-    margin-bottom: 1em;
-  }
-
-  article lazy-img {
-    display: block;
-    max-width: 100%;
-    margin-bottom: 1em;
-  }
-
- button {
-    background-color: var(--background-primary-alt);
-    border: 1px solid var(--background-modifier-border);
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: var(--font-interface-theme), monospace;
-  }
-
-
-  button:hover {
-    background-color: var(--background-modifier-hover);
-  }
-
-  button:active {
-    background-color: var(--background-modifier-active);
-  }
-
-  #border {
-    margin: auto;
-    max-width: 60em;
-    padding: 0 1em;
-  }
-
-/* Custom Highlight.js Theme using site variables */
-
-/* Basic code block styling */
-pre {
-  margin-bottom: 1em;
-  overflow-x: auto;
-  background-color: var(--code-background);
-  padding: 1em;
-  border-radius: 4px;
+/* Button styling */
+button {
+  background-color: var(--background-primary-alt);
   border: 1px solid var(--background-modifier-border);
+  font-family: var(--font-interface-theme), monospace;
 }
 
-pre code {
-  font-family: var(--font-monospace-theme), monospace;
-  font-size: 80%;
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: var(--code-normal);
+button:hover {
+  background-color: var(--background-modifier-hover);
 }
 
-code {
-  font-family: var(--font-monospace-theme), monospace;
-  background-color: var(--code-background);
-  color: var(--code-normal);
-  font-size: 80%;
-  border-radius: 3px;
-  padding: 0.2em 0.4em;
-  border: 1px solid var(--background-modifier-border);
+button:active {
+  background-color: var(--background-modifier-active);
 }
 
-/* Highlight.js Classes - with !important to override defaults */
+/* Highlight.js Theme using site variables */
 .hljs { background: transparent !important; padding: 0 !important; }
 
 .hljs-comment,
@@ -595,15 +324,4 @@ code {
 .hljs-operator,
 .hljs-punctuation {
   color: var(--text-normal) !important;
-}
-
-/* Fix for inline code */
-:not(pre) > code {
-  display: inline;
-  white-space: nowrap;
-}
-
-a {
-  font-style: italic;
-  color: var(--bold-color) !important;
 }

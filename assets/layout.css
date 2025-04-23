@@ -1,0 +1,186 @@
+/* Layout CSS */
+
+html, body {
+  min-height: 100vh;
+}
+
+main {
+  max-width: 60em;
+  width: calc(100% - 2em);
+  margin: auto;
+}
+
+qr-code {
+  height: 20em;
+  width: auto;
+  margin: auto;
+}
+
+qr-code img {
+  width: 100%;
+  height: auto;
+}
+
+.site-description {
+  max-width: 40em;
+  width: 100%;
+  margin-left: auto;
+}
+
+#logo {
+  transform: rotateY(180deg);
+  left: 0px;
+  top: 0px;
+  display: block;
+  padding-left: 1em;
+}
+
+/* Header and footer layout */
+.site-header {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Footer styling */
+.site-footer {
+  border: none !important;
+  border-top: none !important;
+}
+
+/* Hide the third footer column and footer heading */
+.footer-col-3, .footer-heading {
+  display: none !important;
+}
+
+/* Adjust the width of the remaining columns */
+.footer-col-1 {
+  width: -webkit-calc(50% - (30px / 2)) !important;
+  width: calc(50% - (30px / 2)) !important;
+}
+
+.footer-col-2 {
+  width: -webkit-calc(50% - (30px / 2)) !important;
+  width: calc(50% - (30px / 2)) !important;
+}
+
+p.post-meta {
+  width: 100%;
+}
+
+/* Post list layout */
+main ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 1.5rem;
+  width: 100%;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.two-up {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .grid-container > * {
+    grid-column: span 1;
+  }
+}
+
+/* Article layout */
+article {
+  border-bottom: 1px dashed #000;
+}
+
+article p {
+  padding-bottom: 1em;
+  margin-bottom: 0;
+}
+
+article h1, article h2, article h3 {
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+article pre {
+  margin-bottom: 1em;
+  overflow-x: auto;
+  padding: 1em;
+  border-radius: 4px;
+  width: 100%;
+}
+
+article .block {
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+article lazy-img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+/* Tags layout */
+.post-tags {
+  margin: 2rem 0;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.3rem 0.3rem 0;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags-list li {
+  margin: 0;
+}
+
+/* Other layout elements */
+button {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#border {
+  max-width: 60em;
+}
+
+/* Code block layout */
+pre {
+  margin-bottom: 1em;
+  overflow-x: auto;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+:not(pre) > code {
+  display: inline;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+} 
