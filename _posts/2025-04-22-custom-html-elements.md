@@ -4,7 +4,7 @@ title: Custom Html Elements
 date: 2025-04-22 18:23:36 -0700
 categories: blog
 created: 2025-04-22T18:23
-updated: 2025-04-22T18:51
+updated: 2025-04-22T19:04
 ---
 
 
@@ -264,7 +264,7 @@ customElements.define('async-component', AsyncComponent);
 }
 customElements.define('styled-component', StyledComponent);</code></pre>
         <pre><code class="lang-CSS">styled-component {
-  background-color: red;
+  background-color: darkgreen;
   color: white; 
   border: 1px dashed black;
   padding: 1em;
@@ -284,7 +284,7 @@ customElements.define('styled-component', StyledComponent);
   </script>
         <style>
         styled-component {
-          background-color: red;
+          background-color: darkgreen;
           color: white;
           border: 1px dashed black;
           padding: 1em;
