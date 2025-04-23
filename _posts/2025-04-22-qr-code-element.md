@@ -4,7 +4,7 @@ title: Qr Code Element
 date: 2025-04-22 17:11:27 -0700
 categories: blog
 created: 2025-04-22T17:11
-updated: 2025-04-22T17:46
+updated: 2025-04-22T18:34
 ---
 
 <script src="https://lnsy-dev.github.io/qr-code-element/src/qr-code.js"></script>

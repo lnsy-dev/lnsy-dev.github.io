@@ -1,1 +1,27 @@
 <link rel="stylesheet" href="{{ "/assets/custom.css" | relative_url }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/html.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+    
+    // Add language class if missing
+    document.querySelectorAll('pre code:not([class])').forEach((el) => {
+      // Add a default class for code with no language specified
+      if (el.parentNode.textContent.includes('class') || 
+          el.parentNode.textContent.includes('function')) {
+        el.classList.add('language-javascript');
+      } else if (el.parentNode.textContent.includes('<')) {
+        el.classList.add('language-html');
+      } else if (el.parentNode.textContent.includes('{') &&
+                 el.parentNode.textContent.includes(':')) {
+        el.classList.add('language-css');
+      }
+      hljs.highlightElement(el);
+    });
+  });
+</script>
