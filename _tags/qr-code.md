@@ -1,4 +1,4 @@
 ---
 layout: tag
-title: qr-codes
+title: qr-code
 --- 

@@ -12,7 +12,7 @@ layout: default
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
       <li>
-        <a href="{{ '/tags/' | append: tag | relative_url }}">#{{ tag }}</a>
+        <a href="{{ '/tags/' | append: tag | relative_url }}">{{ tag }}</a>
       </li>
     {% endfor %}
   </ul>

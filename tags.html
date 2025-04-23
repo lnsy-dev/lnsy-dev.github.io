@@ -43,7 +43,7 @@ permalink: /tags/
     {% assign sorted_tags = all_tags | sort %}
     {% for tag in sorted_tags %}
       <li>
-        <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-link">#{{ tag }}</a>
+        <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-link">{{ tag }}</a>
       </li>
     {% endfor %}
   </ul>

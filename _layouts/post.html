@@ -21,7 +21,7 @@ layout: default
       <h3>Tags</h3>
       <p>
         {% for tag in page.tags %}
-          <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-link">#{{ tag }}</a>
+          <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-link">{{ tag }}</a>
         {% endfor %}
       </p>
     {% else %}
@@ -40,7 +40,7 @@ layout: default
                 {% unless clean_tag contains "#" %}
                   {% unless unique_tags contains clean_tag %}
                     {% assign unique_tags = unique_tags | push: clean_tag %}
-                    <a href="{{ '/tags/' | append: clean_tag | relative_url }}" class="tag-link">#{{ clean_tag }}</a>
+                    <a href="{{ '/tags/' | append: clean_tag | relative_url }}" class="tag-link">{{ clean_tag }}</a>
                   {% endunless %}
                 {% endunless %}
               {% endif %}
