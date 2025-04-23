@@ -1,0 +1,295 @@
+/* Custom Theme Implementation */
+
+/* Import Departure Mono font */
+@font-face {
+  font-family: "Departure Mono";
+  src: url("DepartureMono-Regular.woff2") format("woff2"),
+       url("DepartureMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --accent-h: 0;
+  --accent-s: 0%;
+  --accent-l: 100%;
+  --text-on-accent: black;
+  --slider-track-background: white;
+  --slider-thumb-border-color: black;
+  --toggle-thumb-color: black;
+  --background-primary: rgb(10, 10, 20);
+  --background-secondary: rgb(10, 10, 20);
+  --background-primary-alt: rgb(10, 10, 20);
+  --background-secondary-alt: rgb(10, 10, 20);
+  --background-modifier-hover: rgb(10, 10, 20);
+  --background-modifier-border: rgb(10, 10, 20);
+  --dropdown-background: rgb(30, 30, 50);
+  --interactive-normal: rgb(30, 30, 50);
+  --text-normal: rgb(212, 212, 212);
+  --h1-color: rgb(255, 255, 255);
+  --h2-color: rgb(255, 255, 255);
+  --h3-color: rgb(255, 255, 255);
+  --h4-color: rgb(255, 255, 255);
+  --h5-color: rgb(255, 255, 255);
+  --h6-color: rgb(255, 255, 255);
+  --bold-color: rgb(255, 255, 255);
+  --code-normal: rgb(255, 255, 255);
+  --code-comment: rgb(100,100,120);
+  --code-background: rgb(10, 10, 20);
+  --hr-color: #353533;
+  --text-muted: rgb(163, 163, 163);
+  --font-text-theme: "Departure Mono";
+  --font-interface-theme: "Departure Mono";
+  --font-monospace-theme: "Departure Mono";
+  --line-height-normal: 1.75;
+  --p-spacing: 2.25rem;
+  --list-marker-color: #d4d4d4;
+  --h1-size: 1.875rem;
+  --h1-line-height: 2.25rem;
+  --h2-size: 1.5em;
+  --h2-line-height: 1.3333333;
+  --h3-size: 1.25em;
+  --h3-line-height: 1.6;
+  --h1-weight: 500;
+  --h2-weight: 500;
+  --h3-weight: 500;
+  --text-selection: #007bcf;
+  --link-decoration: none;
+  --link-external-decoration: none;
+}
+
+/* Apply theme variables to the site with more specific selectors */
+html, body {
+  font-family: var(--font-text-theme), monospace !important;
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
+  line-height: var(--line-height-normal) !important;
+  min-height: 100vh;
+  max-width: 60em;
+  margin: auto;
+}
+
+/* Post list styling */
+main ul li {
+  margin-bottom: 0.5rem;
+}
+
+main ul li span {
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+/* General styling */
+body {
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  font-family: var(--font-text-theme), monospace;
+}
+
+a, a:visited {
+  color: var(--h1-color);
+  text-decoration: var(--link-decoration);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--h1-color);
+  font-family: var(--font-interface-theme), monospace;
+}
+
+code, pre {
+  font-family: var(--font-monospace-theme), monospace;
+  background-color: var(--code-background);
+  color: var(--code-normal);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--text-selection);
+  color: var(--text-normal);
+}
+
+/* Ensure all text content uses our font and colors */
+.wrapper, .page-content, .post-content, .home, .post, .page {
+  font-family: var(--font-text-theme), monospace !important;
+  color: var(--text-normal) !important;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.post-title, .post-list-heading, .page-heading, .footer-heading {
+  font-family: var(--font-interface-theme), monospace !important;
+  color: var(--h1-color) !important;
+  margin-bottom: var(--p-spacing) !important;
+  font-weight: var(--h1-weight) !important;
+}
+
+h1, .post-title {
+  font-size: var(--h1-size) !important;
+  line-height: var(--h1-line-height) !important;
+}
+
+h2, .post-list-heading, .page-heading {
+  font-size: var(--h2-size) !important;
+  line-height: var(--h2-line-height) !important;
+  font-weight: var(--h2-weight) !important;
+}
+
+h3, .post-link {
+  font-size: var(--h3-size) !important;
+  line-height: var(--h3-line-height) !important;
+  font-weight: var(--h3-weight) !important;
+}
+
+p, .post-content p {
+  margin-bottom: var(--p-spacing) !important;
+  font-family: var(--font-text-theme), monospace !important;
+}
+
+/* Links */
+a, a:visited, .site-nav .page-link {
+  color: var(--h1-color) !important;
+  text-decoration: var(--link-decoration) !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Code formatting */
+code, pre, .highlighter-rouge, .highlight {
+  font-family: var(--font-monospace-theme), monospace !important;
+  background-color: var(--code-background) !important;
+  color: var(--code-normal) !important;
+  border: none !important;
+}
+
+header, footer {
+  border: none !important;
+}
+
+/* Header and footer */
+.site-header {
+  background-color: var(--background-secondary) !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.site-title, .site-title:visited {
+  color: var(--h1-color) !important;
+  font-family: var(--font-interface-theme), monospace !important;
+}
+
+.site-nav {
+  background-color: var(--background-primary) !important;
+  border: none !important;
+}
+
+.site-nav .page-link {
+  color: var(--text-normal) !important;
+}
+
+/* Footer styling */
+.site-footer {
+  background-color: var(--background-secondary) !important;
+  color: var(--text-muted) !important;
+  border: none !important;
+  border-top: none !important;
+}
+
+.footer-col-wrapper, .footer-col, .contact-list, .social-media-list {
+  color: var(--text-muted) !important;
+}
+
+/* Hide the third footer column and footer heading */
+.footer-col-3, .footer-heading {
+  display: none !important;
+}
+
+/* Adjust the width of the remaining columns */
+.footer-col-1 {
+  width: -webkit-calc(50% - (30px / 2)) !important;
+  width: calc(50% - (30px / 2)) !important;
+}
+
+.footer-col-2 {
+  width: -webkit-calc(50% - (30px / 2)) !important;
+  width: calc(50% - (30px / 2)) !important;
+}
+
+/* Post and page content */
+.post-meta {
+  color: var(--text-muted) !important;
+  font-family: var(--font-text-theme), monospace !important;
+}
+
+.post-list li {
+  margin-bottom: var(--p-spacing) !important;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--p-spacing) !important;
+}
+
+li::marker {
+  color: var(--list-marker-color) !important;
+}
+
+/* Horizontal rule */
+hr {
+  border-color: var(--hr-color) !important;
+}
+
+/* SVG icons */
+.svg-icon {
+  fill: var(--text-muted) !important;
+}
+
+/* Menu icon in mobile view */
+.site-nav .menu-icon > svg {
+  fill: var(--text-normal) !important;
+}
+
+/* Tables */
+table, th, td {
+  color: var(--text-normal) !important;
+}
+
+table th {
+  background-color: var(--code-background) !important;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* Make sure main content area has the correct background */
+.page-content {
+  background-color: var(--background-primary) !important;
+}
+
+/* Special class for bold text */
+strong, b {
+  color: var(--bold-color) !important;
+}
+
+/* Syntax highlighting */
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: var(--code-comment) !important;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--background-secondary) !important;
+  }
+  
+  .site-nav input:checked ~ .trigger {
+    background-color: var(--background-secondary) !important;
+  }
+} 

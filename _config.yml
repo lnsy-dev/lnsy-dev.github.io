@@ -18,18 +18,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Lindsey Mysse
-email: your-email@example.com
+title: LNSY
+email: lindsey.mysse@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal website for Lindsey Mysse. This site is built with Jekyll and GitHub Pages.
+ The Digital Garden of LNSY. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lnsy-dev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lnsy-dev
 
 # Build settings
-theme: minima
+theme: no-style-please
 plugins:
   - jekyll-feed
+
+# Add custom includes
+include:
+  - _includes/head.html
+  
+# Add custom head
+head_custom: |
+  <link rel="stylesheet" href="/assets/custom.css">
 
 # Markdown settings
 markdown_ext: "md"
