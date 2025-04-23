@@ -26,29 +26,38 @@ setup_ruby_env() {
       brew install ruby
     fi
     
-    # Add Homebrew Ruby to PATH if needed
-    if [[ ":$PATH:" != *":/opt/homebrew/opt/ruby/bin:"* ]]; then
-      export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-      export GEM_HOME="$HOME/.gem"
-      export PATH="$GEM_HOME/bin:$PATH"
-    fi
+    # Always set Homebrew Ruby paths
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+    export GEM_HOME="$HOME/.gem"
+    export PATH="$GEM_HOME/bin:$PATH"
+    
+    # Check Ruby version to confirm we're using Homebrew Ruby
+    RUBY_VERSION=$(ruby -v)
+    echo "Using Ruby: $RUBY_VERSION"
+    echo "Ruby path: $(which ruby)"
+    echo "Gem path: $(which gem)"
   else
     echo "Homebrew not found. Installing Ruby environment may require sudo permissions."
     echo "Consider installing Homebrew (https://brew.sh/) for a safer Ruby setup."
   fi
   
-  # Install bundler if needed
-  if ! command -v bundle &> /dev/null; then
-    echo "Installing Bundler..."
+  # Install bundler if needed - specify version to match Gemfile.lock
+  BUNDLER_VERSION=$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1 | tr -d ' ')
+  if [[ -n "$BUNDLER_VERSION" ]]; then
+    echo "Installing Bundler version $BUNDLER_VERSION to match Gemfile.lock..."
+    gem install bundler:$BUNDLER_VERSION
+  else
+    echo "Installing latest Bundler..."
     gem install bundler
   fi
   
+  # Verify bundler is properly installed
+  echo "Bundler version: $(bundle -v)"
+  
   # Install dependencies if needed
-  if [ ! -d "vendor/bundle" ]; then
-    echo "Installing Jekyll dependencies locally..."
-    bundle config set --local path 'vendor/bundle'
-    bundle install
-  fi
+  echo "Installing Jekyll dependencies locally..."
+  bundle config set --local path 'vendor/bundle'
+  bundle install
 }
 
 # Clean previous build to ensure all content is fresh
@@ -111,7 +120,7 @@ ensure_404_exists
 
 # Build and serve the site with enhanced watching and reloading
 echo "Starting Jekyll server with full site watching on port $PORT..."
-bundle exec jekyll serve --port $PORT --livereload-port $((PORT + 1000)) --force_polling --watch --incremental --trace
+bundle exec jekyll serve --port $PORT --livereload-port $((PORT + 1000)) --force_polling --watch --incremental
 
 # Note: If you encounter any issues, try running these commands manually:
 # bundle install     # Install dependencies

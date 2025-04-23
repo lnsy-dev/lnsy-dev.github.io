@@ -13,38 +13,38 @@
 :root {
   --accent-h: 0;
   --accent-s: 0%;
-  --accent-l: 100%;
-  --text-on-accent: black;
-  --slider-track-background: white;
+  --accent-l: 0%;
+  --text-on-accent: white;
+  --slider-track-background: #333333;
   --slider-thumb-border-color: black;
   --toggle-thumb-color: black;
-  --background-primary: rgb(10, 10, 20);
-  --background-secondary: rgb(10, 10, 20);
-  --background-primary-alt: rgb(10, 10, 20);
-  --background-secondary-alt: rgb(10, 10, 20);
-  --background-modifier-hover: rgb(10, 10, 20);
-  --background-modifier-border: rgb(10, 10, 20);
-  --dropdown-background: rgb(30, 30, 50);
-  --interactive-normal: rgb(30, 30, 50);
-  --text-normal: rgb(212, 212, 212);
-  --h1-color: rgb(255, 255, 255);
-  --h2-color: rgb(255, 255, 255);
-  --h3-color: rgb(255, 255, 255);
-  --h4-color: rgb(255, 255, 255);
-  --h5-color: rgb(255, 255, 255);
-  --h6-color: rgb(255, 255, 255);
-  --bold-color: rgb(255, 255, 255);
-  --code-normal: rgb(255, 255, 255);
-  --code-comment: rgb(100,100,120);
-  --code-background: rgb(10, 10, 20);
-  --hr-color: #353533;
-  --text-muted: rgb(163, 163, 163);
+  --background-primary: #fcf9f0;
+  --background-secondary: #fcf9f0;
+  --background-primary-alt: #f5f2e8;
+  --background-secondary-alt: #f5f2e8;
+  --background-modifier-hover: #f5f2e8;
+  --background-modifier-border: #e5e2d8;
+  --dropdown-background: #f5f2e8;
+  --interactive-normal: #f5f2e8;
+  --text-normal: #000000;
+  --h1-color: #000000;
+  --h2-color: #000000;
+  --h3-color: #000000;
+  --h4-color: #000000;
+  --h5-color: #000000;
+  --h6-color: #000000;
+  --bold-color: #000000;
+  --code-normal: #000000;
+  --code-comment: #555555;
+  --code-background: #f5f2e8;
+  --hr-color: #cccccc;
+  --text-muted: #555555;
   --font-text-theme: "Departure Mono";
   --font-interface-theme: "Departure Mono";
   --font-monospace-theme: "Departure Mono";
   --line-height-normal: 1.75;
   --p-spacing: 2.25rem;
-  --list-marker-color: #d4d4d4;
+  --list-marker-color: #333333;
   --h1-size: 1.875rem;
   --h1-line-height: 2.25rem;
   --h2-size: 1.5em;
@@ -54,7 +54,7 @@
   --h1-weight: 500;
   --h2-weight: 500;
   --h3-weight: 500;
-  --text-selection: #007bcf;
+  --text-selection: #cccccc;
   --link-decoration: none;
   --link-external-decoration: none;
 }
@@ -292,4 +292,40 @@ strong, b {
   .site-nav input:checked ~ .trigger {
     background-color: var(--background-secondary) !important;
   }
+}
+
+/* Tags styling */
+.post-tags {
+  margin: 2rem 0;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.3rem 0.3rem 0;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-primary-alt);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: var(--text-normal);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.tag-link:hover {
+  background-color: var(--background-modifier-hover);
+  text-decoration: none;
+}
+
+.tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags-list li {
+  margin: 0;
 } 

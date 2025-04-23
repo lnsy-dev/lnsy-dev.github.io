@@ -16,5 +16,23 @@
         {{ content }}
       </div>
     </main>
+    
+    <!-- Script execution helper -->
+    <script>
+      // This script helps ensure custom elements and embedded scripts work properly
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find all script tags in the content and execute them
+        const contentScripts = document.querySelectorAll('.page-content script');
+        contentScripts.forEach(script => {
+          if (script.innerText) {
+            try {
+              eval(script.innerText);
+            } catch (e) {
+              console.error('Error executing script:', e);
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html> 

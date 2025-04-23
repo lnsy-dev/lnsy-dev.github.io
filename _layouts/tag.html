@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<header>
+  <h1>#{{ page.title }}</h1>
+  <p>Posts tagged with #{{ page.title }}</p>
+  <p><a href="{{ '/tags' | relative_url }}">&larr; All Tags</a></p>
+</header>
+
+<main>
+  <ul>
+    {% for post in site.posts %}
+      {% assign text_content = post.content | strip_html %}
+      {% assign hash_words = text_content | split: " " | where_exp: "word", "word contains '#'" %}
+      
+      {% assign has_tag = false %}
+      {% for word in hash_words %}
+        {% if word contains "#" %}
+          {% assign tag_word = word | strip | strip_newlines %}
+          {% assign clean_tag = tag_word | remove_first: "#" | downcase | strip %}
+          {% if clean_tag == page.title %}
+            {% assign has_tag = true %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if has_tag %}
+      <li>
+        <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</main> 

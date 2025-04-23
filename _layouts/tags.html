@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<header>
+  <h1>All Tags</h1>
+  <p>Browse posts by tag</p>
+</header>
+
+<main>
+  <ul class="tags-list">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+      <li>
+        <a href="{{ '/tags/' | append: tag | relative_url }}">#{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {{ content }}
+</main> 

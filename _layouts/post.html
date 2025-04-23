@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="post-tags">
+    {% assign text_content = page.content | strip_html %}
+    {% assign hash_words = text_content | split: " " | where_exp: "word", "word contains '#'" %}
+    
+    {% if hash_words.size > 0 %}
+      <h3>Tags</h3>
+      <p>
+        {% assign unique_tags = "" | split: "" %}
+        {% for word in hash_words %}
+          {% if word contains "#" %}
+            {% assign tag_word = word | strip | strip_newlines %}
+            {% assign clean_tag = tag_word | remove_first: "#" | downcase | strip %}
+            {% if clean_tag != "" %}
+              {% unless clean_tag contains "#" %}
+                {% unless unique_tags contains clean_tag %}
+                  {% assign unique_tags = unique_tags | push: clean_tag %}
+                  <a href="{{ '/tags/' | append: clean_tag | relative_url }}" class="tag-link">#{{ clean_tag }}</a>
+                {% endunless %}
+              {% endunless %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </p>
+    {% endif %}
+  </div>
+
+  <div class="post-navigation">
+    <p>
+      <a href="{{ '/' | relative_url }}">&larr; Back to Home</a>
+    </p>
+  </div>
+</article> 

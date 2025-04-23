@@ -1,0 +1,42 @@
+---
+layout: default
+title: All Tags
+permalink: /tags/
+---
+
+<header>
+  <h1>All Tags</h1>
+  <p>Browse posts by tag</p>
+</header>
+
+<main>
+  <ul class="tags-list">
+    {% assign all_tags = "" | split: "" %}
+    
+    {% for post in site.posts %}
+      {% assign text_content = post.content | strip_html %}
+      {% assign hash_words = text_content | split: " " | where_exp: "word", "word contains '#'" %}
+      
+      {% for word in hash_words %}
+        {% if word contains "#" %}
+          {% assign tag_word = word | strip | strip_newlines %}
+          {% assign clean_tag = tag_word | remove_first: "#" | downcase | strip %}
+          {% if clean_tag != "" %}
+            {% unless clean_tag contains "#" %}
+              {% unless all_tags contains clean_tag %}
+                {% assign all_tags = all_tags | push: clean_tag %}
+              {% endunless %}
+            {% endunless %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    
+    {% assign sorted_tags = all_tags | sort %}
+    {% for tag in sorted_tags %}
+      <li>
+        <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-link">#{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</main> 
