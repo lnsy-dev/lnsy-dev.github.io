@@ -109,7 +109,7 @@ code, pre {
   font-family: var(--font-monospace-theme), monospace;
   background-color: var(--code-background);
   color: var(--code-normal);
-  font-size: 90%;
+  font-size: 95%;
   border-radius: 3px;
 }
 
