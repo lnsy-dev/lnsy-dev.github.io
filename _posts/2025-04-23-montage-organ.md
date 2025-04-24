@@ -4,12 +4,16 @@ title: Montage Organ
 date: 2025-04-23 17:31:09 -0700
 categories: blog
 created: 2025-04-23T17:31
-updated: 2025-04-23T17:36
+updated: 2025-04-23T17:48
+tags:
+  - vj
+  - code
+  - webdev
+  - multi-media
 ---
 [Play the Montage Organ Here](https://lnsy-dev.github.io/montage-organ/montage-organ.html)
 
-
-This is a fun VJ framework I built. It works well with MIDI instruments and OBS streaming. 
+This is a fun VJ framework I built. It works well with MIDI instruments and OBS streaming. It's a way to edit a movie while you write the soundtrack at the same time. I showed a movie buff friend and they deemed what I was doing "True Cinema". 
 
 It has a really simple concept for determining which part of the videos it represents. The lowest note the software has received will always go to the beginning of the video, and the highest note the software has received will always go to the end of the video. This means the edit points of the video change as the range of the piece expand. I consider it a feature, not a bug. 
 

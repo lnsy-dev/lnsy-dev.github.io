@@ -4,7 +4,12 @@ title: Html Includes
 date: 2025-04-23 17:27:20 -0700
 categories: blog
 created: 2025-04-23T17:27
-updated: 2025-04-23T17:37
+updated: 2025-04-23T17:46
+tags:
+  - html
+  - custom-html-elements
+  - webdev
+  - code
 ---
 [Github Repository Here](https://github.com/lnsy-dev/html-partial)
 
