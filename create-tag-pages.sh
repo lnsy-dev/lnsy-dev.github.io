@@ -10,10 +10,11 @@ HASHTAGS=$(grep -Eoh "#[a-zA-Z0-9-]+" _posts/*.md | sed 's/#//' | sort | uniq)
 
 # Extract tags from YAML front matter
 echo "Extracting tags from YAML front matter..."
-YAML_TAGS=$(grep -A 10 "^---" _posts/*.md | grep -Eo "tags:.*" | sed 's/tags://' | tr -d '[],' | tr ' ' '\n' | grep -v "^$" | sort | uniq)
+# This handles the indented YAML tag format
+YAML_TAGS=$(awk '/^---/{flag=1;next}/^---/{flag=0}flag && /^ *- [a-zA-Z0-9-]+/{gsub(/^ *- /,"");print}' _posts/*.md | sort | uniq)
 
 # Combine both sets of tags
-ALL_TAGS=$(echo "$HASHTAGS"$'\n'"$YAML_TAGS" | sort | uniq)
+ALL_TAGS=$(echo "$HASHTAGS"$'\n'"$YAML_TAGS" | grep -v "^$" | sort | uniq)
 
 # Create tag pages
 for tag in $ALL_TAGS; do
