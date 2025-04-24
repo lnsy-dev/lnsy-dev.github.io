@@ -4,10 +4,11 @@ title: Obsidian Starter Notebook
 date: 2025-04-24 11:58:17 -0700
 categories: blog
 created: 2025-04-24T11:58
-updated: 2025-04-24T12:14
+updated: 2025-04-24T12:18
 tags:
   - obsidian
   - sublime-text
+  - project-xanadu
 ---
 [Obsidian Starter Notebook](https://github.com/lnsy-dev/obsidian-starter-notebook)
 
