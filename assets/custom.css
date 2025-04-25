@@ -16,7 +16,8 @@ body {
 }
 
 .site-description {
-  text-align: justify;
+  text-align: left;
+
 }
 
 /* Links */
@@ -81,7 +82,7 @@ pre code {
 
 
 article {
-  text-align: justify;
+  text-align: left;
 }
 
 article code {
