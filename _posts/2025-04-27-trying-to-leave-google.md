@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Trying To Leave Google
+title: Getting Rid of Google
 date: 2025-04-27 13:16:02 -0700
 categories: blog
 created: 2025-04-27T13:16
