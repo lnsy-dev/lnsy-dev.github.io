@@ -4,7 +4,7 @@ title: Getting Rid of Google
 date: 2025-04-27 13:16:02 -0700
 categories: blog
 created: 2025-04-27T13:16
-updated: 2025-04-27T13:22
+updated: 2025-04-27T13:30
 tags:
   - google
   - monopolies
@@ -20,7 +20,7 @@ During the course of my conversation with tech support I began to wonder how man
 
 I have had the pleasure of working with Google on software projects, specifically their Google Earth Engine. I can't help but be impressed with the quality of engineers that Google hires and the beautiful things they build. I don't have a quibble with the engineers -- I despise how google does business.
 
-As a software developer I use Google products across multiple companies with multiple people. I use Google Cloud, Google AI services, Google Book search.  I use Google Chrome browser as my primary browser. I have several Google accounts that handle various aspects of my life. I am a YouTube Premium subscriber. 
+As a software developer I use Google products across multiple companies with multiple people. I use Google Cloud, Google AI services, Google Book search.  I use Google Chrome as my primary browser. I have several Google accounts that handle various aspects of my life. I am a YouTube Premium subscriber. 
 
 Google is a fundamental part of my life and, at this point, has been for most of my life.
 
