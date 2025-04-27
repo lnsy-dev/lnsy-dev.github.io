@@ -4,7 +4,7 @@ title: Getting Rid of Google
 date: 2025-04-27 13:16:02 -0700
 categories: blog
 created: 2025-04-27T13:16
-updated: 2025-04-27T13:30
+updated: 2025-04-27T13:31
 tags:
   - google
   - monopolies
@@ -34,6 +34,6 @@ This is why it's so heartbreaking to realize that our relationship with this com
 - [They have collaborated with other mega corporations to suppress wages of software developers](https://www.latimes.com/business/technology/la-fi-tn-tech-jobs-settlement-20150903-story.html).
 
 
-Because of network effects, extracting myself from the Google ecosystem seems almost impossible. But this post is a first post on a journey of me at least trying.
+Because of network effects, extracting myself from the Google ecosystem seems almost impossible. But this post is a first step on a journey of me at least trying.
 
 I no longer like how Google does business. How do I organize my life -- especially my professional life as a software developer -- so that I don't have to do business with Google? This is a new goal of mine. 
