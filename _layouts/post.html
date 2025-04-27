@@ -9,6 +9,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%Y-%m-%d" }}
       </time>
+      <br /><small><i>Last Updated</i>: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.updated | date: "%Y-%m-%d %H:%M" }}</time></small>
     </p>
   </header>
 
