@@ -4,7 +4,7 @@ title: Getting Rid of Google
 date: 2025-04-27 13:16:02 -0700
 categories: blog
 created: 2025-04-27T13:16
-updated: 2025-04-27T13:20
+updated: 2025-04-27T13:22
 tags:
   - google
   - monopolies
@@ -32,6 +32,7 @@ This is why it's so heartbreaking to realize that our relationship with this com
 - [They have let their algorithms spread hateful propaganda](https://www.ucdavis.edu/curiosity/news/youtube-video-recommendations-lead-more-extremist-content-right-leaning-users-researchers).
 - [They have cozied up to my country's dictator to preserve their monopolistic business practices](https://arstechnica.com/tech-policy/2024/11/fate-of-googles-search-empire-could-rest-in-trumps-hands/)
 - [They have collaborated with other mega corporations to suppress wages of software developers](https://www.latimes.com/business/technology/la-fi-tn-tech-jobs-settlement-20150903-story.html).
+
 
 Because of network effects, extracting myself from the Google ecosystem seems almost impossible. But this post is a first post on a journey of me at least trying.
 
