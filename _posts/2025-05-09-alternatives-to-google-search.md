@@ -4,9 +4,10 @@ title: Alternatives To Google Search
 date: 2025-05-09 05:53:01 -0700
 categories: blog
 created: 2025-05-09T05:53
-updated: 2025-05-09T06:08
+updated: 2025-05-09T06:09
 tags:
   - getting-rid-of-google
+  - vibe-coding
 ---
 Google search has been bad for quite some time. But lately with the AI slop they insist on including on their web pages and the endless ads, it has gotten for the most part unusable.
 
