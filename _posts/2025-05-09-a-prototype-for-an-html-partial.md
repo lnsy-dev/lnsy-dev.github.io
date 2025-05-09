@@ -4,7 +4,7 @@ title: A Prototype For An Html Partial
 date: 2025-05-09 05:06:15 -0700
 categories: blog
 created: 2025-05-09T05:06
-updated: 2025-05-09T05:13
+updated: 2025-05-09T05:51
 tags:
   - html
   - webdev
@@ -23,11 +23,14 @@ It would look something like this when implemented:
 <head>
 	<html-partial src="metadata.html"></html-partial>
 </head>
+<body>
 	<html-partial src="content-05-09-2025.html"></html-partial>
+</body>
 </html>
 ```
 
-This theoretical html partial lets us re-use metadata.html and content.html to construct a single html file. 
+
+This theoretical html partial lets us re-use metadata.html and content-05-09-2025.html to construct a single html file. 
 
 I wrote a prototype of what this could look like utilizing Custom HTML elements. It looks like this: 
 
@@ -56,5 +59,42 @@ class HTMLPartial extends HTMLElement {
 
 customElements.define('html-partial', HTMLPartial)
 
+```
+
+Using this code -- though I strongly advise against using it in production -- would look something like:
+
+```html
+<html>
+<head>
+<script>
+class HTMLPartial extends HTMLElement {
+
+ connectedCallback(){
+   this.shadowdom = this.getAttribute('shadowdom')
+   this.src = this.getAttribute('src')
+   if(this.src === null){
+      this.innerHTML = '<error>HTML PARTIAL REQUIRES SOURCE</error>'
+   }
+   fetch(this.src)
+    .then(res => res.text())
+    .then(res => {
+      if(this.shadowdom){
+        this.shadow = this.attachShadow({mode: 'open'})
+        this.shadow.innerHTML = res
+      } else {
+        this.innerHTML = res
+      }
+    })
+  }
+}
+
+customElements.define('html-partial', HTMLPartial)
+</script>
+</head>
+<body>
+	<html-partial src="test-src.html" shadodom></html-partial>
+
+</body>
+</html>
 ```
 
