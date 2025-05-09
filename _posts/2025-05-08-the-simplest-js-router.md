@@ -4,7 +4,7 @@ title: The Simplest Js Router
 date: 2025-05-08 08:54:15 -0700
 categories: blog
 created: 2025-05-08T08:54
-updated: 2025-05-08T08:55
+updated: 2025-05-08T09:00
 tags:
   - router
   - webdev
@@ -12,6 +12,8 @@ tags:
   - ecmascript
   - es6
   - code
+  - vibe-coding
+  - prototypes
 ---
 Here is the simplest router I have figured out in Javascript: 
 
