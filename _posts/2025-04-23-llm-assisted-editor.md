@@ -14,7 +14,7 @@ tags:
 ---
 [Use the Application Here](https://lnsy-dev.github.io/llm-assisted-editor/)
 
-Before Cursor AI,, before Claude Command Line, before all of these, I built this experimental text editor that utilizes ChatGPT Turbo 3.5 to help me write code and markdown. You must bring your own API key to use it.
+Before Cursor AI, before Claude Command Line, before all of these, I built this experimental text editor that utilizes ChatGPT Turbo 3.5 to help me write code and markdown. You must bring your own API key to use it.
 
 There are a few features I like. For instance, AI-generated text is clearly marked and cannot be copied by the user. Philosophically, I decided at this point that you shouldn't be allowed to copy and paste AI-generated text. I decided for this app that a human being should have to either speak or type out the output of the large language model just so that there is one more filter to ensure the text is accurate. 
 
