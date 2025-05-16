@@ -26,10 +26,10 @@ setup_ruby_env() {
       brew install ruby
     fi
     
-    # Always set Homebrew Ruby paths
-    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+    # Set up gem paths
     export GEM_HOME="$HOME/.gem"
-    export PATH="$GEM_HOME/bin:$PATH"
+    export GEM_PATH="$GEM_HOME:/opt/homebrew/lib/ruby/gems/3.4.0"
+    export PATH="/opt/homebrew/opt/ruby/bin:$GEM_HOME/bin:$PATH"
     
     # Check Ruby version to confirm we're using Homebrew Ruby
     RUBY_VERSION=$(ruby -v)
@@ -41,23 +41,34 @@ setup_ruby_env() {
     echo "Consider installing Homebrew (https://brew.sh/) for a safer Ruby setup."
   fi
   
+  # Remove existing bundler installation
+  echo "Removing existing bundler installation..."
+  gem uninstall bundler --all --executables || true
+  
   # Install bundler if needed - specify version to match Gemfile.lock
   BUNDLER_VERSION=$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1 | tr -d ' ')
   if [[ -n "$BUNDLER_VERSION" ]]; then
     echo "Installing Bundler version $BUNDLER_VERSION to match Gemfile.lock..."
-    gem install bundler:$BUNDLER_VERSION
+    gem install bundler:$BUNDLER_VERSION --install-dir "$GEM_HOME"
   else
     echo "Installing latest Bundler..."
-    gem install bundler
+    gem install bundler --install-dir "$GEM_HOME"
   fi
+  
+  # Ensure bundler is in PATH
+  export PATH="$GEM_HOME/bin:$PATH"
   
   # Verify bundler is properly installed
   echo "Bundler version: $(bundle -v)"
   
-  # Install dependencies if needed
-  echo "Installing Jekyll dependencies locally..."
-  bundle config set --local path 'vendor/bundle'
-  bundle install
+  # Only install dependencies if vendor/bundle doesn't exist
+  if [ ! -d "vendor/bundle" ]; then
+    echo "Installing Jekyll dependencies locally..."
+    bundle config set --local path 'vendor/bundle'
+    bundle install
+  else
+    echo "Dependencies already installed in vendor/bundle"
+  fi
 }
 
 # Clean previous build to ensure all content is fresh

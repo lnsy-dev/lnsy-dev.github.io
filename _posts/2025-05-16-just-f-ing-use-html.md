@@ -4,7 +4,16 @@ title: Just F Ing Use Html
 date: 2025-05-16 10:20:04 -0700
 categories: blog
 created: 2025-05-16T10:20
-updated: 2025-05-16T10:25
+updated: 2025-05-16T10:29
+tags:
+  - webdev
+  - the-vanilla-stack
+  - CSS
+  - code
+  - es6
+  - javascript
+  - html
+  - large-language-models
 ---
 [https://justfuckingusehtml.com/](https://justfuckingusehtml.com/)
 
