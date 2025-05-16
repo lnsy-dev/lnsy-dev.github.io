@@ -3,8 +3,8 @@ layout: post
 title: Just F Ing Use Html
 date: 2025-05-16 10:20:04 -0700
 categories: blog
-created: 2025-05-16T10:20
-updated: 2025-05-16T10:40
+created: 2025-05-16T07:20:00
+updated: 2025-05-16T10:50
 tags:
   - webdev
   - the-vanilla-stack
@@ -23,7 +23,7 @@ A classic rant, updated recently:
 
 > Sam Altman's AI army is laughing its silicon balls off while you're knee-deep in React's virtual DOMshit, praying your app doesn't choke on its own bloated corpse. This isn't progress. It's a fucking _tragedy_. You've got a shiny new Ferrari in your garage, and you're still riding a rusty tricycle with a flat tire. Grow the fuck up.
 
-I started taking React jobs again when LLM's came out. Honestly, the boilerplate and general silliness of React gets to me, but the LLM's have enough knowledge of it it makes it pretty easy. You still have to solve the hardest part of programming: how do I divide this process up so that it 1. works and 2. is understandable to humans. 
+I started taking React jobs again when LLM's came out. Honestly, the boilerplate and general silliness of React gets to me, but an LLM assist makes it bearable. You still have to solve the hardest part of programming: how do I divide this process up so that it 1. works and 2. is understandable to humans. 
 
 In my grouchy days I think a lot of React programmers like it because it let's them nibble around the edges of a problem solving linter errors and configuration rather than doing that deep thinking that makes software actually, you know, work. React is great for looking busy. 
 
