@@ -1,0 +1,21 @@
+---
+layout: post
+title: Just F Ing Use Html
+date: 2025-05-16 10:20:04 -0700
+categories: blog
+created: 2025-05-16T10:20
+updated: 2025-05-16T10:25
+---
+[https://justfuckingusehtml.com/](https://justfuckingusehtml.com/)
+
+A classic rant, updated recently:
+
+> AI's out here, a gift from the heavens (or at least from Sam Altman's nerd fortress) ready to write your shitty little to-do app in five seconds flat. It can churn out pixel-perfect HTML, debug your fuck-ups, and probably even wipe your ass if you ask nicely. But no, you're still humping your frameworks like they're the last lifeboat on the Titanic. What the hell is wrong with you? Are you that addicted to 10,000 dependencies and a build process that takes longer than your last failed relationship?
+
+> Sam Altman's AI army is laughing its silicon balls off while you're knee-deep in React's virtual DOMshit, praying your app doesn't choke on its own bloated corpse. This isn't progress. It's a fucking _tragedy_. You've got a shiny new Ferrari in your garage, and you're still riding a rusty tricycle with a flat tire. Grow the fuck up.
+
+I started taking React jobs again when LLM's came out. Honestly, the boilerplate and general silliness of React gets to me, but the LLM's have enough knowledge of it it makes it pretty easy. You still have to solve the hardest part of programming: how do I divide this process up so that it 1. works and 2. is understandable. 
+
+In the end, I still write React -- not because I think it's great, but because the business world demands it. No one ever got fired for choosing IBM or React, and in the end I have to make a living. 
+
+I wish I could make my living just writing actually good code that is maintainable and sturdy, but the market can stay irrational a lot longer than you can stay solvent. 
