@@ -4,7 +4,7 @@ title: Just F Ing Use Html
 date: 2025-05-16 10:20:04 -0700
 categories: blog
 created: 2025-05-16T10:20
-updated: 2025-05-16T10:39
+updated: 2025-05-16T10:40
 tags:
   - webdev
   - the-vanilla-stack
@@ -27,7 +27,7 @@ I started taking React jobs again when LLM's came out. Honestly, the boilerplate
 
 In my grouchy days I think a lot of React programmers like it because it let's them nibble around the edges of a problem solving linter errors and configuration rather than doing that deep thinking that makes software actually, you know, work. React is great for looking busy. 
 
-In the end, I still write React -- not because I think it's great, but because the business world demands it. No one ever got fired for choosing IBM or React, and in the end I have to make a living. 
+In the end, I still write React -- not because I think it's great, but because the business world demands it. No one ever got fired for choosing IBM or React and in the end I have to make a living. 
 
 I wish I could make my living just writing good code that is maintainable and sturdy; but the market can stay irrational a lot longer than you can stay solvent. 
 
