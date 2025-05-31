@@ -1,10 +1,15 @@
 ---
-created: 2025-05-31T07:32
-updated: 2025-05-31T07:48
-tags:
+layout: post
+title: "How To Get To and Maintain Inbox Zero"
+date: 2025-05-31 07:50:14 -0700
+categories: blog
+tags: 
   - get-rid-of-google
-  - Email
+  - email
+  - productivity
+  - cognitive-load
 ---
+
 I maintain inbox zero. I have for the past decade or so. 
 
 People have told me they are jealous but I think it's pretty simple, in fact, especially with gmail. 
