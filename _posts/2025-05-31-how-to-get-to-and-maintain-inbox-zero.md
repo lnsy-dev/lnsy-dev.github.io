@@ -4,7 +4,7 @@ title: "How To Get To and Maintain Inbox Zero"
 date: 2025-05-31 07:50:14 -0700
 categories: blog
 tags: 
-  - get-rid-of-google
+  - getting-rid-of-google
   - email
   - productivity
   - cognitive-load
