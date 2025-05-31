@@ -25,6 +25,7 @@ a, a:visited {
   color: var(--h1-color);
   text-decoration: var(--link-decoration);
   text-shadow: var(--text-shadow);
+  font-weight: bolder;
 }
 
 a:hover {
