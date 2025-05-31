@@ -1,15 +1,16 @@
 ---
 layout: post
-title: "How To Get To and Maintain Inbox Zero"
+title: How To Get To and Maintain Inbox Zero
 date: 2025-05-31 07:50:14 -0700
 categories: blog
-tags: 
+tags:
   - getting-rid-of-google
   - email
   - productivity
   - cognitive-load
+created: 2025-05-31T07:50
+updated: 2025-05-31T08:37
 ---
-
 I maintain inbox zero. I have for about a decade. People have told me they are jealous. To me it is a necessity: as a programmer I am hired, more or less, to think clearly. Reducing my cognitive load whereever I can adds to my ability to do what I love most: writing software.
 
 Here are my techniques if you want to try: 
