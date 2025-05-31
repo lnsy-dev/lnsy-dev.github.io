@@ -10,9 +10,9 @@ tags:
   - cognitive-load
 ---
 
-I maintain inbox zero. I have for the past decade or so. 
+I maintain inbox zero. I have for about a decade. People have told me they are jealous. To me it is a necessity: as a programmer I am hired, more or less, to think clearly. Therefore reducing my cognitive load whereever I can adds to my ability to deliver what my clients need. 
 
-People have told me they are jealous but I think it's pretty simple, in fact, especially with gmail. 
+Here are my techniques if you want to try: 
 
 1. **Utilize the Snooze Feature For Important Emails** -- a lot of emails don't need to get done today or immediately. Maybe you have a day, or you know that on Friday afternoon you're going to be tired and distracted so you might as well answer emails. Snooze any emails that must be replied to but don't need to be replied to for a later date. In fact, for this project, snooze all of them for tomorrow. Today you're going to be zen.
 2. **Declare Email Bankruptcy, Accept you will miss some things and archive all of it** -- I did this about a decade ago on Gmail. I archived several thousand emails and never looked back. If someone really needs to talk to you they'll send you another email. 
