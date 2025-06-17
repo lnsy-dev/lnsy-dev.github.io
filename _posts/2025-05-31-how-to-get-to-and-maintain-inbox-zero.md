@@ -9,14 +9,14 @@ tags:
   - productivity
   - cognitive-load
 created: 2025-05-31T07:50
-updated: 2025-05-31T08:37
+updated: 2025-06-16T17:44
 ---
-I maintain inbox zero. I have for about a decade. People have told me they are jealous. To me it is a necessity: as a programmer I am hired, more or less, to think clearly. Reducing my cognitive load whereever I can adds to my ability to do what I love most: writing software.
+I maintain inbox zero. I have for about a decade. People have told me they are jealous. To me it is a necessity: as a programmer I am hired, more or less, to think clearly. Reducing my cognitive load where ever I can adds to my ability to do what I love most: writing software.
 
 Here are my techniques if you want to try: 
 
 1. **Utilize the Snooze Feature For Important Emails**
-  When you select an email in either Proton Mail or Gmail a menu appears at the top of the context window. In this menu there is a clock icon. This is the single most important tool for both emails and living in general: the snooze button. <br> A lot of emails don't need to get done immediately or even today. Maybe you have a hour scheduled for emails, or you know that on Friday afternoon you're going to be tired and distracted so you might as well have a low-stakes project. Snooze any emails that must be replied to for a later date. <br> *In fact, for this project: snooze all of them for tomorrow. Today you're going to be zen.*
+  When you select an email in either Proton Mail or Gmail a menu appears at the top of the context window. In this menu there is a clock icon. This is the single most important tool for both emails and living in general: the snooze button. <br> A lot of emails don't need to be processed immediately or even today. Maybe you have a hour scheduled for emails, or you know that on Friday afternoon you're going to be tired and distracted so you might as well have a low-stakes project. Snooze any emails that must be replied to for a later date. <br> *In fact, for this project: snooze all of them for tomorrow. Today you're going to be zen.*
 
 2. **Declare email bankruptcy, accept you will miss some things and archive all of it**
   I did this about a decade ago on Gmail. I archived several thousand emails and never looked back. If someone really needs to talk to you they'll send you another email. The archive feature means you can still search for emails but you don't need to look at them every day. 
