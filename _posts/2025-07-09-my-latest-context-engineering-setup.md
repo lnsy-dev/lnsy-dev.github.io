@@ -4,7 +4,7 @@ title: My Latest Context Engineering Setup
 date: 2025-07-09 07:25:54 -0700
 categories: blog
 created: 2025-07-09T07:25
-updated: 2025-07-09T08:00
+updated: 2025-07-09T08:09
 tags:
   - cognitive-load
   - getting-rid-of-google
@@ -21,7 +21,7 @@ As I often say: an LLM coding with you is like working with the fastest, worst j
 
 There were, of course, a few problems. Cursor’s models are a moving target, as is their pricing. Throughout the projects the application began behaving differently based on the same inputs. Prompts and techniques that worked at the beginning of the project stopped working midway through. Models that were the basis of what I was doing were put behind paywalls with no real notice.
 
-Integration with tools like Figma was interesting but still half-baked. Cursor “helps” too much—it’s great for making big edits, but the moment you want to change the copy of a header, then the hallucinations and popovers start getting in your way.
+Integration with tools like Figma was interesting but still half-baked. Cursor “helps” too much — it’s great for making big edits, but the moment you want to change the copy of a header, then the hallucinations and popovers start getting in your way.
 
 ## My Solution
 
@@ -52,3 +52,4 @@ LLMs have vastly accelerated my software development process, but I think a lot 
 It reminds me of when both ES6 features and React shipped at the same time. A lot of people conflated the innovations in EcmaScript with the features provided by React in their minds. Yes, LLMs are increasing the velocity of software development, but not in the place people think.
 
 Mitigating LLMs' weaknesses while using their strengths to augment your own code is the path that is going to lead to an advancement in software. Everything else is hype.
+
