@@ -4,7 +4,7 @@ title: My Latest Context Engineering Setup
 date: 2025-07-09 07:25:54 -0700
 categories: blog
 created: 2025-07-09T07:25
-updated: 2025-07-09T08:10
+updated: 2025-07-09T08:13
 tags:
   - cognitive-load
   - getting-rid-of-google
@@ -15,7 +15,7 @@ tags:
 ---
 ## The Problem
 
-I recently finished two projects using mostly Cursor. It was a blast. I’m used to managing teams overseas, and while the code that comes back from the LLMs isn’t of the same quality, it is delivered at a spectacular velocity that allowed us to ship and iterate quickly.
+I recently finished two projects using mostly Cursor. It was a blast. I’m used to managing teams overseas and while the code that comes back from the LLMs isn’t of the same quality, it is delivered at a spectacular velocity that allowed us to ship and iterate quickly.
 
 As I often say: an LLM coding with you is like working with the fastest, worst junior dev you’ve ever met. It’s a spectacular tool but requires a certain amount and kind of management.
 
