@@ -6,6 +6,7 @@
 /* General styling */
 html, body {
   font-family: var(--font-text-theme), monospace;
+  font-weight: 300;
   background-color: var(--background-primary);
   color: var(--text-normal);
   line-height: var(--line-height-normal);
@@ -15,6 +16,10 @@ body {
   text-shadow: var(--text-shadow);
 }
 
+p {
+  font-weight: 300;
+}
+
 .site-description {
   text-align: left;
 
@@ -22,10 +27,9 @@ body {
 
 /* Links */
 a, a:visited {
-  color: var(--h1-color);
+  color: var(--highlight-color);
   text-decoration: var(--link-decoration);
   text-shadow: var(--text-shadow);
-  font-weight: bolder;
 }
 
 a:hover {
@@ -34,7 +38,6 @@ a:hover {
 
 a {
   font-style: italic;
-  color: var(--bold-color);
 }
 
 /* Headings */
@@ -178,8 +181,9 @@ strong, b {
   color: var(--bold-color);
 }
 
+
 /* Tag styling */
-.tag-link {
+.tag-link, .tag-link:visited {
   border: 1px solid var(--background-modifier-border);
   background-color: var(--background-primary-alt);
   color: var(--text-normal);
@@ -194,6 +198,7 @@ strong, b {
 /* Button styling */
 button {
   background-color: var(--background-primary-alt);
+  color: var(--fg-color);
   border: 1px solid var(--background-modifier-border);
   font-family: var(--font-interface-theme), monospace;
 }

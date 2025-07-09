@@ -3,24 +3,24 @@
 
 :root {
   /* Core Color Palette */
-  --bg-color: #fcf9f0;            /* Light beige background */
-  --fg-color: #0a5c0a;            /* Green text */
-  --highlight-color: #c4e1c6;     /* Light green highlight */
-  --secondary-color: #f5f2e8;     /* Lighter beige secondary */
-  --trinary-color: #aabbaa;       /* Muted green-gray */
-  --quaternary-color: #e5e2d8;    /* Border color */
-  --confirmation-color: #0a5c0a;  /* Success green */
-  --notification-color: #377c43;  /* Muted text green */
-  --inactive-color: #cccccc;      /* Inactive gray */
-  --warning-color: #639e71;       /* Soft green for warnings */
+  --bg-color: #0f172a;            /* Dark Slate Blue */
+  --fg-color: #f8fafc;            /* Near White */
+  --highlight-color: #FE7400;     /* Slate Gray */
+  --secondary-color: #1e293b;     /* Darker Slate Blue */
+  --trinary-color: #475569;       /* Medium Slate Gray */
+  --quaternary-color: #334155;    /* Slate Gray for Borders */
+  --confirmation-color: #3b82f6;  /* Bright Blue for Success */
+  --notification-color: #94a3b8;  /* Light Slate Gray for Muted Text */
+  --inactive-color: #475569;      /* Medium Slate Gray for Inactive */
+  --warning-color: #f59e0b;       /* Amber for Warnings */
   --error-color: #ff6b6b;         /* Added error color */
-  --neutral-color: #1c3320;       /* Dark green */
-  
+  --neutral-color: #1e293b;       /* Darker Slate Blue */
+
   /* Legacy accent values kept for compatibility */
-  --accent-h: 120;
-  --accent-s: 60%;
-  --accent-l: 25%;
-  
+  --accent-h: 217;
+  --accent-s: 91%;
+  --accent-l: 60%;
+
   /* Mapped UI Elements */
   --text-on-accent: white;
   --slider-track-background: var(--neutral-color);
@@ -36,28 +36,28 @@
   --dropdown-background: var(--secondary-color);
   --interactive-normal: var(--secondary-color);
   --text-normal: var(--fg-color);
-  --h1-color: #064d06;
-  --h2-color: #064d06;
-  --h3-color: #064d06;
-  --h4-color: #064d06;
-  --h5-color: #064d06;
-  --h6-color: #064d06;
-  --bold-color: #054b05;
+  --h1-color: var(--fg-color);
+  --h2-color: var(--fg-color);
+  --h3-color: var(--fg-color);
+  --h4-color: var(--fg-color);
+  --h5-color: var(--fg-color);
+  --h6-color: var(--fg-color);
+  --bold-color: var(--fg-color);
   --code-normal: var(--fg-color);
-  --code-comment: var(--warning-color);
+  --code-comment: var(--notification-color);
   --code-background: var(--secondary-color);
   --hr-color: var(--inactive-color);
   --text-muted: var(--notification-color);
   --list-marker-color: var(--notification-color);
-  
+
   /* Font settings */
   --font-text-theme: "Fira Code";
   --font-interface-theme: "Fira Code";
   --font-monospace-theme: "Fira Code";
   --font-logo-theme: "Fira Sans Condensed";
-  --line-height-normal: 1.75;
+  --line-height-normal: 2;
   --p-spacing: 2.25rem;
-  
+
   /* Typography */
   --h1-size: 1.875rem;
   --h1-line-height: 2.25rem;
@@ -69,11 +69,12 @@
   --h2-weight: 500;
   --h3-weight: 500;
   --text-selection: var(--inactive-color);
-  
+
   /* Misc UI settings */
   --link-decoration: none;
   --link-external-decoration: none;
-  --text-shadow: 0 0 1px rgba(10, 92, 10, 0.3);
+  --text-shadow: none;
   --border-radius: 4px;
   --font-size: 1em;
+  --article-width: 40rem;
 } 

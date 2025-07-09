@@ -5,11 +5,15 @@ html, body {
 }
 
 main, footer, header {
-  max-width: 60em;
+  max-width: var(--article-width);
 
   width: calc(100% - 2em);
   margin: auto;
 
+}
+
+main.extra-wide {
+  max-width: 60rem !important;
 }
 
 img {
