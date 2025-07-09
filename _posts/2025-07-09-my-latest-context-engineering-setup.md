@@ -4,7 +4,7 @@ title: My Latest Context Engineering Setup
 date: 2025-07-09 07:25:54 -0700
 categories: blog
 created: 2025-07-09T07:25
-updated: 2025-07-09T07:58
+updated: 2025-07-09T08:00
 tags:
   - cognitive-load
   - getting-rid-of-google
@@ -29,9 +29,9 @@ I have gone back to using [Sublime Text](https://www.sublimetext.com/) with some
 
 There are a few other options that are still in motion, but I think I’m going to be sticking to the CLI/Sublime combination going forward.
 
-Rather than “prompting,” I have been writing carefully worded markdown files describing the functionality and targets for the LLM. I have gone back to focusing on single files for the LLM—in the end, as a programmer, you have to contemplate cognitive load, and you simply can’t understand what the LLM has done and the consequences of it if you are trying to read 3-4 or a dozen files.
+Rather than “prompting,” I have been writing carefully worded markdown files describing the functionality and targets for the LLM. I have gone back to focusing on single files for the LLM. As a programmer you have to contemplate cognitive load, and you simply can’t understand what the LLM has done and the consequences of it if you are trying to read 3-4 or a dozen files.
 
-The closer I get to translation, the better the LLM works. That is to say, I am not asking it to reason at all; I am using the LLM as a compiler between natural language and code. I think this presents immense possibilities.
+The closer I get to translation the better the LLM works. I am not asking it to reason at all; I am using the LLM as a compiler between natural language and code. I think this presents immense possibilities.
 
 ## Small Projects
 
