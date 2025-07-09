@@ -4,7 +4,7 @@ title: Project Xanadu
 date: 2025-04-24 12:15:02 -0700
 categories: blog
 created: 2025-04-24T12:15
-updated: 2025-04-24T12:27
+updated: 2025-07-09T07:13
 tags:
   - the-mother-of-all-demos
   - project-xanadu
@@ -16,5 +16,5 @@ tags:
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Project%20Xanadu)
 
-Like The Mother of All Demos, Project Xanadu remains the cornerstone of what I think about computation. I know the marketing guys are promising VR AI NFT Crypto Utopias, but computers are still really only good at storing and retrieving data. Organizing and thinking about data is still hard for humans, just like it is for LLM's. 
 
+Like The Mother of All Demos, Project Xanadu remains the cornerstone of my thoughts on computation. Although marketing teams promise VR, AI, NFT, and Crypto Utopias, computers are still primarily effective at storing and retrieving data. Organizing and thinking about data remain challenging for humans, just as they do for LLMs.
