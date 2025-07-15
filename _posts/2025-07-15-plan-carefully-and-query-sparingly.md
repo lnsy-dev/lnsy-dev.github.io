@@ -4,7 +4,7 @@ title: Plan Carefully And Query Sparingly
 date: 2025-07-15 16:32:34 -0700
 categories: blog
 created: 2025-07-15T16:32
-updated: 2025-07-15T16:37
+updated: 2025-07-15T16:39
 tags:
   - large-language-models
   - prototypes
@@ -21,11 +21,11 @@ Perhaps I have slowed down a bit -- I spend a lot more time planning and writing
 
 My general style for coding with LLM's: 
 
-1. Embrace the prototype -- I like to have lots of purely vibe-coded prototypes in separate folders that implement a specific function. When I get something working I have the LLM write a memo about the structure of the code with good working examples. Then I implement the code mostly by hand from the examples the LLM has given me. 
-2. Think Translation, not Implementation -- There have been many attempts at computer languages that act like natural human speech. They have all failed in brilliant and hilarious ways. Now we have the single best implementation of this paradigm, and it's amazing. I find I have better success with LLM's when I think about it in terms of using it as a compiler from natural language to a programming language.
-3. You're still programming -- Remember in that first programming class where they asked you to describe how to make a peanut butter and jelly sandwich and then the instructor deliberately mis-read your instructions to be wrong? Yeah, thinking this way is really hard, but that's what actual programming is like. The LLM's aren't going to do that for you.
-4. Plan carefully and query sparingly -- if you find your LLM is in a loop, the problem is you, not the LLM. Quit asking the robot to do something it's obviously bad at and re-architect the code.
-5. Single files and small slices -- I know you can put your entire codebase into an LLM these days. Despite what certain tech CEO's say, it isn't going to actually fix a bug -- it'll spackle over the bug with technical debt.  The LLM doesn't understand architecture and can barely follow an example template. Give the LLM small slices of tasks to implement documented, solved problems. 
+1. **Embrace prototype vibes** -- I like to have lots of purely vibe-coded prototypes in separate folders that implement a specific feature. When I get something working I have the LLM write a memo about the structure of the code with good working examples. Then I implement the code mostly by hand from the examples the LLM has given me. 
+2. **Think Translation, not Implementation** -- There have been many attempts at computer languages that act like natural human speech. They have all failed in brilliant and hilarious ways. Now we have the single best implementation of this paradigm -- and it's amazing. I find I have better success with LLM's when I think about it in terms of using it as a compiler from natural language to a programming language than a "I don't want to think, but still must write software".
+3. **You're still programming** -- Remember in that first programming class where they asked you to describe how to make a peanut butter and jelly sandwich and then the instructor deliberately mis-read your instructions to be wrong? Yeah, thinking this way is really hard, but that's what actual programming is like. The LLM's aren't going to do that for you.
+4. **Plan carefully and query sparingly** -- if you find your LLM is in a loop, the problem is you, not the LLM. Quit asking the robot to do something it's obviously bad at and re-architect the code.
+5. **Single files and small slices** -- I know you can put your entire codebase into an LLM these days. Despite what certain tech CEO's say, it isn't going to actually fix a bug -- it'll spackle over the bug with technical debt.  The LLM doesn't understand architecture and can barely follow an example template. Give the LLM small slices of tasks to implement documented, solved problems. 
 
-I've found these rules of LLM to be useful as I use these new tools. I honestly don't believe LLM's will ever get to the point where they can write a non-trivial app without human assistance, and we humans who love writing software aren't going to lose our careers. 
+I've found these rules of LLM to be useful as I use these new tools. I don't think LLM's will ever get to the point where they can write a non-trivial app without human assistance, and we humans who love writing software aren't going to lose our careers. 
 
