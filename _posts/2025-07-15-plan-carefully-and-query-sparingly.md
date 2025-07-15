@@ -4,7 +4,7 @@ title: Plan Carefully And Query Sparingly
 date: 2025-07-15 16:32:34 -0700
 categories: blog
 created: 2025-07-15T16:32
-updated: 2025-07-15T16:33
+updated: 2025-07-15T16:36
 tags:
   - large-language-models
   - prototypes
@@ -13,7 +13,7 @@ tags:
   - generative-ai
   - google
 ---
-There is a recent study: https://arstechnica.com/ai/2025/07/study-finds-ai-tools-made-open-source-software-developers-19-percent-slower/ that says that programmers who use AI are 19 percent slower than programmers who don't. I have a few quibbles with this study: for instance, the tasks to use AI on were chosen at random, which means the programmers didn't have the opportunity to assess if the LLM would be suited to the job. I haven't found anything about the experience levels of the programmers or their level of experience with the tools they used like Cursor.  
+There is a [recent study](https://arstechnica.com/ai/2025/07/study-finds-ai-tools-made-open-source-software-developers-19-percent-slower/) that says that programmers who use AI are 19 percent slower than programmers who don't. I have a few quibbles with this study: for instance, the tasks to use AI on were chosen at random, which means the programmers didn't have the opportunity to assess if the LLM would be suited to the job. I haven't found anything about the experience levels of the programmers or their level of experience with the tools they used like Cursor.  
 
 Lately I've been using [Goose](https://block.github.io/goose/) with Google Gemini as the backend. I have query limits (I haven't gone paid with Gemini yet), but I haven't really minded. 
 
