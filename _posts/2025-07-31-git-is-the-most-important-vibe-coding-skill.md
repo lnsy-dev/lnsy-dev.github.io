@@ -4,9 +4,9 @@ title: Git Is The Most Important Vibe Coding Skill
 date: 2025-07-31 07:13:20 -0700
 categories: blog
 created: 2025-07-31T07:13
-updated: 2025-07-31T07:33
+updated: 2025-07-31T07:39
 ---
-There is lots of discussion about "Vibe Coding" lately. As I have said in other posts, I treat the LLM as the fastest, worst junior dev I have ever worked with.
+There has been a lot of discussion about "Vibe Coding" lately. As I have said in other posts: I treat Large Language Models as the fastest, worst junior dev I have ever worked with.
 
 Among junior devs who have Dunning Krueger-ed their way into a vibe coding senior dev roll, there are lots of complaints about what the LLM does to their codebase. The regressions, odd wanderings and sometimes self-defeating arson of a code base that can come from letting an LLM run free.
 
