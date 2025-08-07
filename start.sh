@@ -14,60 +14,60 @@ kill_existing_processes() {
   fi
 }
 
-# Set up Ruby environment safely (without sudo)
-setup_ruby_env() {
-  # Check if Homebrew is installed
-  if command -v brew &> /dev/null; then
-    echo "Setting up Ruby environment using Homebrew..."
-    
-    # Check if Ruby is installed via Homebrew
-    if ! brew list ruby &> /dev/null; then
-      echo "Installing Ruby via Homebrew..."
-      brew install ruby
-    fi
-    
-    # Set up gem paths
-    export GEM_HOME="$HOME/.gem"
-    export GEM_PATH="$GEM_HOME:/opt/homebrew/lib/ruby/gems/3.4.0"
-    export PATH="/opt/homebrew/opt/ruby/bin:$GEM_HOME/bin:$PATH"
-    
-    # Check Ruby version to confirm we're using Homebrew Ruby
-    RUBY_VERSION=$(ruby -v)
-    echo "Using Ruby: $RUBY_VERSION"
-    echo "Ruby path: $(which ruby)"
-    echo "Gem path: $(which gem)"
+# Check if we have network connectivity
+check_network() {
+  echo "Checking network connectivity..."
+  if timeout 3 ping -c 1 github.com &> /dev/null; then
+    echo "✅ Network connection available"
+    return 0  # Network available
   else
-    echo "Homebrew not found. Installing Ruby environment may require sudo permissions."
-    echo "Consider installing Homebrew (https://brew.sh/) for a safer Ruby setup."
+    echo "📴 No network connection detected"
+    return 1  # No network
   fi
-  
-  # Remove existing bundler installation
-  echo "Removing existing bundler installation..."
-  gem uninstall bundler --all --executables || true
-  
-  # Install bundler if needed - specify version to match Gemfile.lock
-  BUNDLER_VERSION=$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1 | tr -d ' ')
-  if [[ -n "$BUNDLER_VERSION" ]]; then
-    echo "Installing Bundler version $BUNDLER_VERSION to match Gemfile.lock..."
-    gem install bundler:$BUNDLER_VERSION --install-dir "$GEM_HOME"
+}
+
+# Load Ruby environment from install.sh setup
+load_ruby_env() {
+  if [ -f ".jekyll_env" ]; then
+    echo "Loading Ruby environment..."
+    source .jekyll_env
   else
-    echo "Installing latest Bundler..."
-    gem install bundler --install-dir "$GEM_HOME"
+    echo "❌ Environment not set up. Please run './install.sh' first."
+    exit 1
   fi
-  
-  # Ensure bundler is in PATH
-  export PATH="$GEM_HOME/bin:$PATH"
-  
-  # Verify bundler is properly installed
-  echo "Bundler version: $(bundle -v)"
-  
-  # Only install dependencies if vendor/bundle doesn't exist
+}
+
+# Verify dependencies are installed
+verify_dependencies() {
   if [ ! -d "vendor/bundle" ]; then
-    echo "Installing Jekyll dependencies locally..."
-    bundle config set --local path 'vendor/bundle'
-    bundle install
+    echo "❌ Dependencies not found. Please run './install.sh' first."
+    exit 1
+  fi
+
+  if ! command -v bundle &> /dev/null; then
+    echo "❌ Bundler not found. Please run './install.sh' first."
+    exit 1
+  fi
+
+  echo "✅ Dependencies verified"
+}
+
+# Determine which configuration to use
+determine_config() {
+  if check_network; then
+    # Online - use regular config with remote theme
+    JEKYLL_CONFIG="_config.yml"
+    echo "🌐 Using online configuration with remote theme"
   else
-    echo "Dependencies already installed in vendor/bundle"
+    # Offline - check if offline config exists
+    if [ -f "_config_offline.yml" ]; then
+      JEKYLL_CONFIG="_config_offline.yml"
+      echo "📴 Using offline configuration"
+    else
+      echo "❌ No network and offline config not found."
+      echo "Please run './install.sh' while connected to the internet to set up offline mode."
+      exit 1
+    fi
   fi
 }
 
@@ -79,60 +79,64 @@ clean_previous_build() {
   fi
 }
 
-# Ensure 404 page exists
-ensure_404_exists() {
-  if [ ! -f "404.html" ]; then
-    echo "Creating a basic 404.html file..."
-    cat > 404.html << EOF
----
-layout: default
-permalink: /404.html
----
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-EOF
-  fi
-}
-
 # Parse command line arguments
+OFFLINE_MODE=false
 PORT="4000"  # Default port
-while getopts "p:" opt; do
+
+while getopts "p:o" opt; do
   case $opt in
     p) PORT="$OPTARG"
     ;;
-    \?) echo "Invalid option -$OPTARG" >&2
+    o) OFFLINE_MODE=true
+    ;;
+    \?) echo "Usage: $0 [-p port] [-o]"
+        echo "  -p port    Specify port number (default: 4000)"
+        echo "  -o         Force offline mode"
+        exit 1
     ;;
   esac
 done
 
-# Run setup
+# Run startup sequence
 kill_existing_processes
-setup_ruby_env
+load_ruby_env
+verify_dependencies
 clean_previous_build
-ensure_404_exists
+
+# Force offline mode if requested
+if [ "$OFFLINE_MODE" = true ]; then
+  if [ -f "_config_offline.yml" ]; then
+    JEKYLL_CONFIG="_config_offline.yml"
+    echo "🔒 Forced offline mode enabled"
+  else
+    echo "❌ Offline mode requested but offline config not found."
+    echo "Please run './install.sh' first to set up offline mode."
+    exit 1
+  fi
+else
+  determine_config
+fi
 
 # Build and serve the site with enhanced watching and reloading
-echo "Starting Jekyll server with full site watching on port $PORT..."
-bundle exec jekyll serve --port $PORT --livereload-port $((PORT + 1000)) --force_polling --watch --incremental
+echo ""
+echo "🚀 Starting Jekyll server on port $PORT..."
+echo "📁 Using configuration: $JEKYLL_CONFIG"
+echo "🔗 Server will be available at: http://localhost:$PORT"
+echo "🔄 Live reload will be available at: http://localhost:$((PORT + 1000))"
+echo ""
 
-# Note: If you encounter any issues, try running these commands manually:
-# bundle install     # Install dependencies
-# bundle update      # Update dependencies 
+# Start Jekyll with the determined configuration
+bundle exec jekyll serve \
+  --config "$JEKYLL_CONFIG" \
+  --port "$PORT" \
+  --livereload-port "$((PORT + 1000))" \
+  --force_polling \
+  --watch \
+  --incremental \
+  --host 0.0.0.0
+
+echo ""
+echo "Note: If you encounter any issues:"
+echo "  - Run './install.sh' to reinstall dependencies"
+echo "  - Use './start.sh -o' to force offline mode"
+echo "  - Use './start.sh -p 3000' to change port"

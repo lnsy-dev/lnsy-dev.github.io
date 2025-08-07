@@ -1,0 +1,40 @@
+# Offline configuration - bypasses remote theme downloads
+
+# Site settings
+title: LNSY
+email: lindsey.mysse@gmail.com
+description: I am a Multi-Webby winning web designer and developer who has also worked in environmental design, interface and fine art. I have developed software solutions for everything from gestural interface for musical instruments to tech platforms for open source intelligence. Over the past 7 years I've developed interfaces for machine learning applications, incorporating both new and mature technology back-ends.
+baseurl: ""
+url: "https://lnsy-dev.github.io"
+github_username: lnsy-dev
+
+# Build settings - use local theme instead of remote
+theme: no-style-please
+plugins:
+  - jekyll-feed
+  # jekyll-remote-theme is disabled for offline mode
+
+# Add custom includes
+include:
+  - _includes/head.html
+
+# Add custom head
+head_custom: |
+  <link rel="stylesheet" href="/assets/custom.css">
+
+# Markdown settings
+markdown_ext: "md"
+
+# Collections
+collections:
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+# Collection defaults
+defaults:
+  - scope:
+      path: ""
+      type: tags
+    values:
+      layout: tag

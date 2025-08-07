@@ -1,0 +1,6 @@
+# Jekyll environment configuration
+# This file is sourced by start.sh to set up the Ruby environment
+
+export GEM_HOME="/home/lnsy/.gem"
+export GEM_PATH="/home/lnsy/.gem:/opt/homebrew/lib/ruby/gems/3.4.0"
+export PATH="/opt/homebrew/opt/ruby/bin:/home/lnsy/.gem/bin:/home/lnsy/.gem/bin:/opt/homebrew/opt/ruby/bin:/home/lnsy/.gem/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/lnsy/.bun/bin:/home/lnsy/.nvm/versions/node/v22.17.0/bin:/home/lnsy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"
